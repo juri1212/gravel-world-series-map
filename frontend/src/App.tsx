@@ -16,6 +16,7 @@ function App() {
   const [events, setEvents] = useState<RaceEvent[]>([])
   const [loading, setLoading] = useState(false)
   const [year, setYear] = useState<string>('all')
+  const [selectedId, setSelectedId] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -113,10 +114,10 @@ function App() {
             ))}
           </select>
         </div>
-        <EventList events={filteredEvents} />
+        <EventList events={filteredEvents} onSelect={id => setSelectedId(id)} selectedId={selectedId} />
       </aside>
       <main className="map-area">
-        <MapView events={filteredEvents} />
+        <MapView events={filteredEvents} selectedId={selectedId} onSelect={id => setSelectedId(id)} />
       </main>
     </div>
   )

@@ -1,4 +1,5 @@
 import type { RaceEvent } from '../App'
+import { useEffect, useRef } from 'react'
 
 const SPECIAL_RACES = [
     'UEC European Gravel Championships',
@@ -10,14 +11,47 @@ function isSpecialRace(name?: string) {
     return SPECIAL_RACES.some(s => name.includes(s))
 }
 
-export default function EventList({ events }: { events: RaceEvent[] }) {
+type Props = {
+    events: RaceEvent[]
+    onSelect?: (id: string) => void
+    selectedId?: string | null
+}
+
+export default function EventList({ events, onSelect, selectedId = null }: Props) {
+    const listRef = useRef<HTMLUListElement | null>(null)
+    const itemRefs = useRef<Record<string, HTMLLIElement | null>>({})
+
+    useEffect(() => {
+        if (!selectedId) return
+        const el = itemRefs.current[selectedId]
+        if (el && listRef.current) {
+            // scroll so the item is comfortably visible
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        }
+    }, [selectedId])
+
     if (!events.length) return <p>No events found.</p>
     return (
-        <ul className="event-list">
+        <ul className="event-list" ref={listRef}>
             {events.map(ev => {
                 const special = isSpecialRace(ev.name)
+                const cls = "event-item" + (special ? ' event-item--special' : '') + (selectedId === ev.id ? ' event-item--selected' : '')
                 return (
-                    <li key={ev.id} className={"event-item" + (special ? ' event-item--special' : '')}>
+                    <li
+                        key={ev.id}
+                        ref={el => { itemRefs.current[ev.id] = el }}
+                        className={cls + (onSelect ? ' event-item--clickable' : '')}
+                        onClick={() => onSelect && onSelect(ev.id)}
+                        role={onSelect ? 'button' : undefined}
+                        tabIndex={onSelect ? 0 : undefined}
+                        onKeyDown={e => {
+                            if (!onSelect) return
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault()
+                                onSelect(ev.id)
+                            }
+                        }}
+                    >
                         <div className="flex-between">
                             <div>
                                 <div className="event-name">{ev.name}</div>
@@ -26,7 +60,15 @@ export default function EventList({ events }: { events: RaceEvent[] }) {
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 {special && <div className="badge accent">Championship</div>}
                                 {ev.link && (
-                                    <a className="event-link-icon" href={ev.link} target="_blank" rel="noopener noreferrer" title="Open event page">
+                                    <a
+                                        className="event-link-icon"
+                                        href={ev.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open event page"
+                                        onClick={e => e.stopPropagation()}
+                                        onKeyDown={e => e.stopPropagation()}
+                                    >
                                         🔗
                                     </a>
                                 )}
