@@ -26,14 +26,11 @@ jobs:
           node-version: '20'
 
       - name: Install fetcher deps
-        run: |
-          cd scripts
+        run: npm ci
           npm ci
 
       - name: Run fetcher
-        run: |
-          cd scripts
-          npm run fetch
+        run: npm run fetch-calendar
 
       - name: Copy to frontend/public and commit
         run: |
