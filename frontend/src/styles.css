@@ -10,73 +10,116 @@ body,
 
 body {
     margin: 0;
-    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
 .app-root {
     display: flex;
-    height: 100vh
+    height: 100vh;
+    gap: 20px;
+    align-items: stretch;
 }
 
 .sidebar {
     width: var(--sidebar-width);
-    padding: 16px;
-    border-right: 1px solid #eee;
-    overflow: auto
+    padding: 20px;
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+    overflow: auto;
 }
 
 .map-area {
-    flex: 1
+    flex: 1;
+    min-height: 0;
+    /* allow flex children to shrink */
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.02));
 }
 
 .event-list {
     list-style: none;
     padding: 0;
-    margin: 0
+    margin: 0;
+    display: grid;
+    gap: 12px;
 }
 
 .event-item {
-    padding: 8px 0;
-    border-bottom: 1px solid #f0f0f0
+    padding: 12px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.008));
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    display: grid;
+    gap: 6px;
 }
 
 .event-name {
-    font-weight: 600
+    font-weight: 700;
+    font-size: 0.98rem;
 }
 
 .event-date {
-    color: #666;
-    font-size: 0.9em
+    color: var(--muted);
+    font-size: 0.9em;
 }
 
 .notes {
     font-size: 0.85em;
-    color: #666;
-    margin-top: 12px
+    color: var(--muted);
+    margin-top: 12px;
 }
+
 
 /* Special race highlighting */
 .event-item--special {
-    background: linear-gradient(90deg, rgba(255, 249, 230, 1) 0%, rgba(255, 244, 214, 1) 100%);
-    border-left: 4px solid #ff8a00;
+    background: linear-gradient(90deg, rgba(124, 92, 255, 0.12), rgba(0, 212, 162, 0.06));
+    border-left: 4px solid var(--accent);
 }
 
 .event-item--special .event-name {
-    color: #b45309;
+    color: var(--accent);
 }
 
 .popup-special {
-    color: #b45309;
+    color: var(--accent);
     font-weight: 700;
 }
 
 /* Slightly enlarge the special marker to make it stand out */
 .marker-icon--special {
-    transform: scale(1.08);
+    transform: scale(1.12);
 }
 
 /* Ensure leaflet map fills the container */
 .leaflet-container {
     height: 100%;
-    width: 100%
+    width: 100%;
+}
+
+/* Small utility */
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px
+}
+
+/* Badge */
+.badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.map-card {
+    display: flex;
+    flex-direction: column
+}
+
+.map-header {
+    padding-bottom: 8px
 }
