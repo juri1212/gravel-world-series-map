@@ -5,9 +5,9 @@ import axios from 'axios'
 import { load } from 'cheerio'
 import pRetry from 'p-retry'
 
-const DATA_DIR = path.resolve(process.cwd(), '..', 'data')
+const DATA_DIR = path.resolve(process.cwd(), 'data')
 const OUT_FILE = path.join(DATA_DIR, 'calendar.json')
-const CACHE_DIR = path.resolve(process.cwd(), '..', 'cache')
+const CACHE_DIR = path.resolve(process.cwd(), 'cache')
 
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
 if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true })
@@ -85,7 +85,7 @@ async function main() {
                 withGeo.push(ev)
             }
             // be polite with Nominatim
-            await new Promise(r => setTimeout(r, 1000))
+            // await new Promise(r => setTimeout(r, 1000))
         } catch (e) {
             console.error(`[${i + 1}/${events.length}] Geocode failed for ${ev.locationText}:`, e.message)
             withGeo.push(ev)
