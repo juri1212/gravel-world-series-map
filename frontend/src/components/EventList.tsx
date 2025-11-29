@@ -16,10 +16,9 @@ type Props = {
     onSelect?: (id: string) => void
     selectedId?: string | null
     fullscreen?: boolean
-    onClose?: () => void
 }
 
-export default function EventList({ events, onSelect, selectedId = null, fullscreen, onClose }: Props) {
+export default function EventList({ events, onSelect, selectedId = null, fullscreen }: Props) {
     const listRef = useRef<HTMLUListElement | null>(null)
     const itemRefs = useRef<Record<string, HTMLLIElement | null>>({})
 

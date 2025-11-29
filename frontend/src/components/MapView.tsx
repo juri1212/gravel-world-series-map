@@ -68,7 +68,7 @@ export default function MapView({ events, selectedId = null, onSelect, isMobile 
         .filter(e => e.lat && e.lon)
         .map(e => [e.lat!, e.lon!] as [number, number])
     // refs to marker instances by id
-    const markerRefs = useRef<Record<string, L.Marker>>({})
+    const markerRefs = useRef<Record<string, L.Marker | null>>({})
 
     return (
         <div className="card map-card">
@@ -89,15 +89,15 @@ export default function MapView({ events, selectedId = null, onSelect, isMobile 
                             position={[ev.lat, ev.lon]}
                             icon={isSpecialRace(ev.name) ? specialIcon : defaultIcon}
                             ref={m => {
-                                if (m) markerRefs.current[ev.id] = m as unknown as L.Marker
-                                else delete markerRefs.current[ev.id]
+                                if (m) markerRefs.current[ev.id] = m as L.Marker
+                                else markerRefs.current[ev.id] = null
                             }}
                             eventHandlers={{
                                 click: () => onSelect && onSelect(ev.id),
                                 // avoid opening popups on mobile; parent will show bottom card
-                                popupopen: (e) => {
+                                popupopen: (e: L.LeafletEvent) => {
                                     if (isMobile) {
-                                        try { (e.target as any).closePopup() } catch (err) { }
+                                        try { (e.target as unknown as L.Marker).closePopup() } catch { void 0 }
                                     } else {
                                         onSelect && onSelect(ev.id)
                                     }
@@ -125,7 +125,7 @@ export default function MapView({ events, selectedId = null, onSelect, isMobile 
     )
 }
 
-function MapSelectionHandler({ markersRef, selectedId, isMobile }: { markersRef: React.RefObject<Record<string, L.Marker>>, selectedId?: string | null, isMobile?: boolean }) {
+function MapSelectionHandler({ markersRef, selectedId, isMobile }: { markersRef: React.RefObject<Record<string, L.Marker | null>>, selectedId?: string | null, isMobile?: boolean }) {
     const map = useMap()
     useEffect(() => {
         if (!selectedId) return
@@ -136,9 +136,8 @@ function MapSelectionHandler({ markersRef, selectedId, isMobile }: { markersRef:
         const latlng = marker.getLatLng()
         map.flyTo(latlng, Math.max(map.getZoom(), 8), { duration: 0.6 })
         if (!isMobile) {
-            if ((marker as any).openPopup) {
-                ; (marker as any).openPopup()
-            }
+            const maybe = marker as unknown as { openPopup?: () => void }
+            maybe.openPopup?.()
         }
     }, [selectedId, markersRef, map, isMobile])
     return null

@@ -146,10 +146,7 @@ function App() {
             setSelectedId(id)
             setListOpen(false)
           }}
-          // @ts-ignore - pass custom props for modal behavior
           fullscreen
-          // @ts-ignore
-          onClose={() => setListOpen(false)}
         />
       )}
 
