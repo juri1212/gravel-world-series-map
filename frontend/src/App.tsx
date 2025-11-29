@@ -132,7 +132,7 @@ function App() {
             ))}
           </select>
         </div>
-        <EventList events={filteredEvents} onSelect={id => setSelectedId(id)} selectedId={selectedId} />
+        <EventList events={filteredEvents} onSelect={id => setSelectedId(id)} selectedId={selectedId} years={years} year={year} onYearChange={y => setYear(y)} />
       </aside>
       <main className="map-area">
         <MapView events={filteredEvents} selectedId={selectedId} onSelect={id => setSelectedId(id)} isMobile={isMobile} />
@@ -147,6 +147,9 @@ function App() {
             setListOpen(false)
           }}
           fullscreen
+          years={years}
+          year={year}
+          onYearChange={y => setYear(y)}
         />
       )}
 
