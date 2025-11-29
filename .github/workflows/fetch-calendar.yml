@@ -1,0 +1,44 @@
+name: Fetch Calendar
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # daily at 02:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install fetcher deps
+        run: |
+          cd server/scripts
+          npm ci
+
+      - name: Run fetcher
+        run: |
+          cd server/scripts
+          npm run fetch
+
+      - name: Copy to frontend/public and commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p frontend/public
+          cp server/data/calendar.json frontend/public/calendar.json
+          git add server/data/calendar.json frontend/public/calendar.json || true
+          if ! git diff --quiet --cached; then
+            git commit -m "Update calendar.json (daily)" || true
+            git push
+          else
+            echo "No changes to commit"
+          fi

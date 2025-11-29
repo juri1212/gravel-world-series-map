@@ -1,0 +1,62 @@
+:root {
+    --sidebar-width: 360px;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.app-root {
+    display: flex;
+    height: 100vh
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    padding: 16px;
+    border-right: 1px solid #eee;
+    overflow: auto
+}
+
+.map-area {
+    flex: 1
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.event-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0
+}
+
+.event-name {
+    font-weight: 600
+}
+
+.event-date {
+    color: #666;
+    font-size: 0.9em
+}
+
+.notes {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 12px
+}
+
+/* Ensure leaflet map fills the container */
+.leaflet-container {
+    height: 100%;
+    width: 100%
+}
