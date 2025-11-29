@@ -70,14 +70,14 @@ export default function MapView({ events, selectedId = null, onSelect }: Props) 
     const markerRefs = useRef<Record<string, L.Marker>>({})
 
     return (
-        <div className="card map-card" style={{ height: '100%' }}>
+        <div className="card map-card">
             <div className="map-header flex-between">
                 <div className="map-title">
                     <strong>Race Map</strong>
                     <div className="muted">Interactive map of events</div>
                 </div>
             </div>
-            <div style={{ height: 'calc(100% - 56px)' }}>
+            <div className="map-body">
                 <MapContainer center={defaultCenter} zoom={4} style={{ height: '100%', width: '100%' }} bounds={bounds.length ? bounds as L.LatLngBoundsExpression : undefined}>
                     <TileLayer
                         attribution='&copy; <a href="https://carto.com/attributions">Carto</a> &mdash; © OpenStreetMap contributors'
