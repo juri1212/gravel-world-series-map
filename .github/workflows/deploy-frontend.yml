@@ -5,6 +5,12 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+# Ensure the GITHUB_TOKEN has the rights to publish to Pages
+permissions:
+  contents: read
+  pages: write
+
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
