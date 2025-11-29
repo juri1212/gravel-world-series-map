@@ -118,7 +118,7 @@ function App() {
 
   return (
     <div className="app-root app-with-header">
-      <Header onOpenMenu={() => setListOpen(true)} />
+      <Header menuOpen={listOpen} onToggleMenu={() => setListOpen(v => !v)} />
 
       <aside className="sidebar">
         <h2>Calendar</h2>
