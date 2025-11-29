@@ -157,13 +157,13 @@ body.dark .mobile-menu svg path {
 /* Selected event bottom card for mobile */
 .selected-event-card {
     position: fixed;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     z-index: 1200;
-    padding: 12px;
+    padding: 24px;
     border-radius: 12px;
-    background: rgba(11, 18, 32, 0.95);
+    background: rgba(11, 18, 32, 1);
     color: #e6eef8;
     box-shadow: 0 10px 40px rgba(2, 6, 23, 0.6);
 }

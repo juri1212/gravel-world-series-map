@@ -99,14 +99,14 @@ export default function MapView({ events, selectedId = null, onSelect, isMobile 
                                     if (isMobile) {
                                         try { (e.target as unknown as L.Marker).closePopup() } catch { void 0 }
                                     } else {
-                                        onSelect && onSelect(ev.id)
+                                        if (onSelect) onSelect(ev.id)
                                     }
                                 },
                                 // only clear selection when popup is closed on non-mobile
                                 popupclose: () => {
                                     if (isMobile) return
                                     if (selectedId === ev.id) {
-                                        onSelect && onSelect(null)
+                                        if (onSelect) onSelect(null)
                                     }
                                 }
                             }}
