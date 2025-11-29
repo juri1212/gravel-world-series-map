@@ -21,12 +21,12 @@ jobs:
 
       - name: Install fetcher deps
         run: |
-          cd server/scripts
+          cd scripts
           npm ci
 
       - name: Run fetcher
         run: |
-          cd server/scripts
+          cd scripts
           npm run fetch
 
       - name: Copy to frontend/public and commit
@@ -34,8 +34,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p frontend/public
-          cp server/data/calendar.json frontend/public/calendar.json
-          git add server/data/calendar.json frontend/public/calendar.json || true
+          cp scripts/data/calendar.json frontend/public/calendar.json
+          git add frontend/public/calendar.json || true
           if ! git diff --quiet --cached; then
             git commit -m "Update calendar.json (daily)" || true
             git push
