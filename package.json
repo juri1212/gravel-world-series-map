@@ -1,0 +1,16 @@
+{
+    "name": "gravel-world-series-map",
+    "private": true,
+    "version": "0.0.0",
+    "workspaces": [
+        "frontend",
+        "scripts"
+    ],
+    "scripts": {
+        "dev": "npm --prefix frontend run dev",
+        "build": "npm --prefix frontend run build",
+        "preview": "npm --prefix frontend run preview",
+        "lint": "npm --prefix frontend run lint",
+        "fetch-calendar": "npm --prefix scripts run fetch"
+    }
+}
