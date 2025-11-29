@@ -86,12 +86,6 @@ export default function EventList({ events, onSelect, selectedId = null, fullscr
     if (fullscreen) {
         return (
             <div className="event-list-modal">
-                <div className="event-list-modal-header flex-between">
-                    <h3>Events</h3>
-                    <div>
-                        <button className="btn-close" onClick={() => onClose && onClose()} aria-label="Close">✕</button>
-                    </div>
-                </div>
                 <div className="event-list-modal-body">
                     {list}
                 </div>

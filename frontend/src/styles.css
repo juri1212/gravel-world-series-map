@@ -381,7 +381,11 @@ body.dark .mobile-menu svg path {
     /* Fullscreen modal for event list */
     .event-list-modal {
         position: fixed;
-        inset: 0;
+        left: 0;
+        right: 0;
+        top: 56px;
+        /* sit below the fixed header */
+        bottom: 0;
         z-index: 1300;
         background: linear-gradient(180deg, rgba(11, 18, 32, 0.98), rgba(11, 18, 32, 0.98));
         padding: 14px;
