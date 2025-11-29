@@ -2,6 +2,13 @@
     --sidebar-width: 360px;
 }
 
+/* Make sizing predictable so padding doesn't increase element size unexpectedly */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html,
 body,
 #root {
@@ -168,11 +175,25 @@ body {
 
 .map-card {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
 }
 
 .map-header {
-    padding-bottom: 8px
+    flex: 0 0 auto;
+    padding-bottom: 8px;
+}
+
+/* Map body fills remaining space inside .map-card */
+.map-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.leaflet-container {
+    max-height: 100%;
 }
 
 /* Custom marker tweaks */
