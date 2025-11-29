@@ -406,3 +406,55 @@ body.dark .mobile-menu svg path {
         padding-bottom: 28px
     }
 }
+
+/* Hamburger menu button (three bars -> X) */
+.mobile-menu {
+    width: 40px;
+    height: 36px;
+    position: relative;
+}
+
+.mobile-menu .bar {
+    display: block;
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform 300ms cubic-bezier(.2, .8, .2, 1), opacity 200ms ease, top 300ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.mobile-menu .bar-1 {
+    top: 9px;
+}
+
+.mobile-menu .bar-2 {
+    top: 17px;
+}
+
+.mobile-menu .bar-3 {
+    top: 25px;
+}
+
+.mobile-menu.open .bar-1 {
+    top: 17px;
+    transform: rotate(45deg);
+}
+
+.mobile-menu.open .bar-2 {
+    opacity: 0;
+    transform: scaleX(0.2);
+}
+
+.mobile-menu.open .bar-3 {
+    top: 17px;
+    transform: rotate(-45deg);
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .mobile-menu .bar {
+        transition: none;
+    }
+}
