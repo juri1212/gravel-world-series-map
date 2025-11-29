@@ -19,7 +19,7 @@ function App() {
     const fetchEvents = async () => {
       setLoading(true)
       try {
-        const staticRes = await fetch('/calendar.json')
+        const staticRes = await fetch(`${import.meta.env.BASE_URL}calendar.json`)
         if (!staticRes.ok) throw new Error('calendar.json not found')
         const data = await staticRes.json()
         const list = data && Array.isArray(data.events) ? data.events : []
