@@ -16,9 +16,12 @@ type Props = {
     onSelect?: (id: string) => void
     selectedId?: string | null
     fullscreen?: boolean
+    years?: string[]
+    year?: string
+    onYearChange?: (year: string) => void
 }
 
-export default function EventList({ events, onSelect, selectedId = null, fullscreen }: Props) {
+export default function EventList({ events, onSelect, selectedId = null, fullscreen, years, year, onYearChange }: Props) {
     const listRef = useRef<HTMLUListElement | null>(null)
     const itemRefs = useRef<Record<string, HTMLLIElement | null>>({})
 
@@ -85,6 +88,19 @@ export default function EventList({ events, onSelect, selectedId = null, fullscr
     if (fullscreen) {
         return (
             <div className="event-list-modal">
+                <div className="event-list-modal-header">
+                    {years && onYearChange && (
+                        <div className="year-select">
+                            <label htmlFor="year-mobile">Year: </label>
+                            <select id="year-mobile" value={year} onChange={e => onYearChange(e.target.value)}>
+                                <option value="all">All</option>
+                                {years.map(y => (
+                                    <option key={y} value={y}>{y}</option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                </div>
                 <div className="event-list-modal-body">
                     {list}
                 </div>

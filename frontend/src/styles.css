@@ -397,6 +397,26 @@ body.dark .mobile-menu svg path {
         padding-bottom: 8px;
     }
 
+    .event-list-modal-header .year-select {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .event-list-modal-header .year-select label {
+        font-weight: 700;
+    }
+
+    .event-list-modal-header .year-select select {
+        appearance: none;
+        background: rgba(255, 255, 255, 0.02);
+        color: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        padding: 6px 8px;
+        border-radius: 8px;
+    }
+
     .event-list-modal-body {
         overflow: auto;
         padding-top: 8px;
