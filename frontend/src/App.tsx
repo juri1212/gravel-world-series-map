@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import MapView from './components/MapView'
 import EventList from './components/EventList'
+import Header from './components/Header'
 
 export type RaceEvent = {
   id: string
@@ -116,11 +117,11 @@ function App() {
   }, [])
 
   return (
-    <div className="app-root">
-      <button className="mobile-menu-btn" aria-label="Open events" onClick={() => setListOpen(true)}>☰</button>
+    <div className="app-root app-with-header">
+      <Header onOpenMenu={() => setListOpen(true)} />
 
       <aside className="sidebar">
-        <h2>UCI Gravel Worlds Calendar</h2>
+        <h2>Calendar</h2>
         {loading && <p>Loading events…</p>}
         <div className="year-select">
           <label htmlFor="year">Year: </label>
