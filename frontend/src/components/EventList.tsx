@@ -23,7 +23,14 @@ export default function EventList({ events }: { events: RaceEvent[] }) {
                                 <div className="event-name">{ev.name}</div>
                                 <div className="event-date muted">{ev.date}</div>
                             </div>
-                            {special && <div className="badge accent">Championship</div>}
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                {special && <div className="badge accent">Championship</div>}
+                                {ev.link && (
+                                    <a className="event-link-icon" href={ev.link} target="_blank" rel="noopener noreferrer" title="Open event page">
+                                        🔗
+                                    </a>
+                                )}
+                            </div>
                         </div>
                         <div className="event-location muted">{ev.locationText || (ev.lat && ev.lon ? `${ev.lat.toFixed(3)}, ${ev.lon.toFixed(3)}` : '')}</div>
                     </li>
