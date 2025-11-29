@@ -97,6 +97,40 @@ body {
     width: 100%;
 }
 
+/* Clean map popups and controls */
+.leaflet-popup-content-wrapper {
+    background: rgba(11, 18, 32, 0.95);
+    color: #e6eef8;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.leaflet-popup-content {
+    margin: 8px 12px;
+    font-size: 0.95rem;
+}
+
+.leaflet-popup-tip {
+    display: none;
+}
+
+/* Make the default zoom controls less intrusive */
+.leaflet-control-zoom {
+    border-radius: 8px;
+    background: rgba(11, 18, 32, 0.65);
+    box-shadow: 0 4px 14px rgba(2, 6, 23, 0.4);
+}
+
+.leaflet-control-zoom a {
+    color: #e6eef8;
+}
+
+/* Slightly dim tile images for an elegant look */
+.leaflet-tile {
+    filter: contrast(0.95) saturate(0.95) brightness(0.98);
+}
+
 /* Small utility */
 .flex-between {
     display: flex;
@@ -122,4 +156,18 @@ body {
 
 .map-header {
     padding-bottom: 8px
+}
+
+/* Custom marker tweaks */
+.leaflet-marker-icon.custom-marker-default,
+.leaflet-marker-icon.custom-marker-special {
+    transform-origin: center;
+    transition: transform 140ms ease, filter 140ms ease;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.leaflet-marker-icon.custom-marker-default:hover,
+.leaflet-marker-icon.custom-marker-special:hover {
+    transform: translateY(-4px) scale(1.06);
+    filter: drop-shadow(0 6px 18px rgba(2, 6, 23, 0.5));
 }
