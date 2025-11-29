@@ -15,9 +15,11 @@ type Props = {
     events: RaceEvent[]
     onSelect?: (id: string) => void
     selectedId?: string | null
+    fullscreen?: boolean
+    onClose?: () => void
 }
 
-export default function EventList({ events, onSelect, selectedId = null }: Props) {
+export default function EventList({ events, onSelect, selectedId = null, fullscreen, onClose }: Props) {
     const listRef = useRef<HTMLUListElement | null>(null)
     const itemRefs = useRef<Record<string, HTMLLIElement | null>>({})
 
@@ -31,7 +33,7 @@ export default function EventList({ events, onSelect, selectedId = null }: Props
     }, [selectedId])
 
     if (!events.length) return <p>No events found.</p>
-    return (
+    const list = (
         <ul className="event-list" ref={listRef}>
             {events.map(ev => {
                 const special = isSpecialRace(ev.name)
@@ -80,4 +82,21 @@ export default function EventList({ events, onSelect, selectedId = null }: Props
             })}
         </ul>
     )
+
+    if (fullscreen) {
+        return (
+            <div className="event-list-modal">
+                <div className="event-list-modal-header flex-between">
+                    <h3>Events</h3>
+                    <div>
+                        <button className="btn-close" onClick={() => onClose && onClose()} aria-label="Close">✕</button>
+                    </div>
+                </div>
+                <div className="event-list-modal-body">
+                    {list}
+                </div>
+            </div>
+        )
+    }
+    return list
 }

@@ -58,9 +58,10 @@ type Props = {
     events: RaceEvent[]
     selectedId?: string | null
     onSelect?: (id: string | null) => void
+    isMobile?: boolean
 }
 
-export default function MapView({ events, selectedId = null, onSelect }: Props) {
+export default function MapView({ events, selectedId = null, onSelect, isMobile = false }: Props) {
     const defaultCenter: [number, number] = [48.8566, 2.3522] // Europe center
 
     const bounds: [number, number][] = events
@@ -93,9 +94,18 @@ export default function MapView({ events, selectedId = null, onSelect }: Props) 
                                 else delete markerRefs.current[ev.id]
                             }}
                             eventHandlers={{
-                                popupopen: () => onSelect && onSelect(ev.id),
                                 click: () => onSelect && onSelect(ev.id),
+                                // avoid opening popups on mobile; parent will show bottom card
+                                popupopen: (e) => {
+                                    if (isMobile) {
+                                        try { (e.target as any).closePopup() } catch (err) { }
+                                    } else {
+                                        onSelect && onSelect(ev.id)
+                                    }
+                                },
+                                // only clear selection when popup is closed on non-mobile
                                 popupclose: () => {
+                                    if (isMobile) return
                                     if (selectedId === ev.id) {
                                         onSelect && onSelect(null)
                                     }
@@ -109,27 +119,28 @@ export default function MapView({ events, selectedId = null, onSelect }: Props) 
                             </Popup>
                         </Marker>
                     ) : null)}
-                    <MapSelectionHandler markersRef={markerRefs} selectedId={selectedId} />
+                    <MapSelectionHandler markersRef={markerRefs} selectedId={selectedId} isMobile={isMobile} />
                 </MapContainer>
             </div>
         </div>
     )
 }
 
-function MapSelectionHandler({ markersRef, selectedId }: { markersRef: React.RefObject<Record<string, L.Marker>>, selectedId?: string | null }) {
+function MapSelectionHandler({ markersRef, selectedId, isMobile }: { markersRef: React.RefObject<Record<string, L.Marker>>, selectedId?: string | null, isMobile?: boolean }) {
     const map = useMap()
     useEffect(() => {
         if (!selectedId) return
         const marker = markersRef.current[selectedId]
         if (!marker) return
 
-        // center map on marker and open popup
+        // center map on marker and open popup (only on non-mobile)
         const latlng = marker.getLatLng()
         map.flyTo(latlng, Math.max(map.getZoom(), 8), { duration: 0.6 })
-        // open popup if available
-        if ((marker as any).openPopup) {
-            ; (marker as any).openPopup()
+        if (!isMobile) {
+            if ((marker as any).openPopup) {
+                ; (marker as any).openPopup()
+            }
         }
-    }, [selectedId, markersRef, map])
+    }, [selectedId, markersRef, map, isMobile])
     return null
 }

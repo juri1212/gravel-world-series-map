@@ -17,6 +17,8 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [year, setYear] = useState<string>('all')
   const [selectedId, setSelectedId] = useState<string | null>(null)
+  const [isMobile, setIsMobile] = useState<boolean>(false)
+  const [listOpen, setListOpen] = useState<boolean>(false)
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -100,8 +102,23 @@ function App() {
     return y === year
   })
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const mq = window.matchMedia('(max-width: 720px)')
+    const onChange = (ev: MediaQueryListEvent) => setIsMobile(ev.matches)
+    setIsMobile(mq.matches)
+    if (mq.addEventListener) mq.addEventListener('change', onChange)
+    else mq.addListener(onChange)
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener('change', onChange)
+      else mq.removeListener(onChange)
+    }
+  }, [])
+
   return (
     <div className="app-root">
+      <button className="mobile-menu-btn" aria-label="Open events" onClick={() => setListOpen(true)}>☰</button>
+
       <aside className="sidebar">
         <h2>UCI Gravel Worlds Calendar</h2>
         {loading && <p>Loading events…</p>}
@@ -117,8 +134,43 @@ function App() {
         <EventList events={filteredEvents} onSelect={id => setSelectedId(id)} selectedId={selectedId} />
       </aside>
       <main className="map-area">
-        <MapView events={filteredEvents} selectedId={selectedId} onSelect={id => setSelectedId(id)} />
+        <MapView events={filteredEvents} selectedId={selectedId} onSelect={id => setSelectedId(id)} isMobile={isMobile} />
       </main>
+
+      {isMobile && listOpen && (
+        <EventList
+          events={filteredEvents}
+          selectedId={selectedId}
+          onSelect={id => {
+            setSelectedId(id)
+            setListOpen(false)
+          }}
+          // @ts-ignore - pass custom props for modal behavior
+          fullscreen
+          // @ts-ignore
+          onClose={() => setListOpen(false)}
+        />
+      )}
+
+      {isMobile && selectedId && (() => {
+        const ev = events.find(e => e.id === selectedId)
+        if (!ev) return null
+        return (
+          <div className="selected-event-card card">
+            <div className="flex-between">
+              <div>
+                <div className="event-name">{ev.name}</div>
+                <div className="event-date muted">{ev.date}</div>
+                {ev.locationText && <div className="event-location muted">{ev.locationText}</div>}
+              </div>
+              <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                {ev.link && <a className="event-link-icon" href={ev.link} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>🔗</a>}
+                <button className="btn-close" onClick={() => setSelectedId(null)} aria-label="Close">✕</button>
+              </div>
+            </div>
+          </div>
+        )
+      })()}
     </div>
   )
 }
