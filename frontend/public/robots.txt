@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Point to sitemap
+Sitemap: /sitemap.xml
+
+# If you need to block staging or admin paths, add rules like:
+# Disallow: /admin
