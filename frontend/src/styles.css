@@ -55,6 +55,26 @@ body {
     margin-top: 12px
 }
 
+/* Special race highlighting */
+.event-item--special {
+    background: linear-gradient(90deg, rgba(255, 249, 230, 1) 0%, rgba(255, 244, 214, 1) 100%);
+    border-left: 4px solid #ff8a00;
+}
+
+.event-item--special .event-name {
+    color: #b45309;
+}
+
+.popup-special {
+    color: #b45309;
+    font-weight: 700;
+}
+
+/* Slightly enlarge the special marker to make it stand out */
+.marker-icon--special {
+    transform: scale(1.08);
+}
+
 /* Ensure leaflet map fills the container */
 .leaflet-container {
     height: 100%;
