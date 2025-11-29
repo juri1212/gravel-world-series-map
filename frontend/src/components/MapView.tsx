@@ -41,20 +41,30 @@ export default function MapView({ events }: { events: RaceEvent[] }) {
         .map(e => [e.lat!, e.lon!] as [number, number])
 
     return (
-        <MapContainer center={defaultCenter} zoom={4} style={{ height: '100%', width: '100%' }} bounds={bounds.length ? bounds as L.LatLngBoundsExpression : undefined}>
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            {events.map(ev => ev.lat && ev.lon ? (
-                <Marker key={ev.id} position={[ev.lat, ev.lon]} icon={isSpecialRace(ev.name) ? specialIcon : defaultIcon}>
-                    <Popup>
-                        <strong className={isSpecialRace(ev.name) ? 'popup-special' : ''}>{ev.name}</strong>
-                        <div>{ev.date}</div>
-                        {ev.locationText && <div>{ev.locationText}</div>}
-                    </Popup>
-                </Marker>
-            ) : null)}
-        </MapContainer>
+        <div className="card map-card" style={{ height: '100%' }}>
+            <div className="map-header flex-between">
+                <div className="map-title">
+                    <strong>Race Map</strong>
+                    <div className="muted">Interactive map of events</div>
+                </div>
+            </div>
+            <div style={{ height: 'calc(100% - 56px)' }}>
+                <MapContainer center={defaultCenter} zoom={4} style={{ height: '100%', width: '100%' }} bounds={bounds.length ? bounds as L.LatLngBoundsExpression : undefined}>
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    {events.map(ev => ev.lat && ev.lon ? (
+                        <Marker key={ev.id} position={[ev.lat, ev.lon]} icon={isSpecialRace(ev.name) ? specialIcon : defaultIcon}>
+                            <Popup>
+                                <strong className={isSpecialRace(ev.name) ? 'popup-special' : ''}>{ev.name}</strong>
+                                <div>{ev.date}</div>
+                                {ev.locationText && <div>{ev.locationText}</div>}
+                            </Popup>
+                        </Marker>
+                    ) : null)}
+                </MapContainer>
+            </div>
+        </div>
     )
 }
