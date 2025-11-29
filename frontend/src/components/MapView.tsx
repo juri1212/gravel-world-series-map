@@ -2,6 +2,8 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import type { RaceEvent } from '../App'
+import { useEffect, useRef } from 'react'
+import { useMap } from 'react-leaflet'
 
 type IconDefaultPrototype = { _getIconUrl?: () => string | undefined }
 delete (L.Icon.Default.prototype as unknown as IconDefaultPrototype)._getIconUrl
@@ -52,12 +54,20 @@ const specialIcon = new L.Icon({
     className: 'custom-marker-special'
 })
 
-export default function MapView({ events }: { events: RaceEvent[] }) {
+type Props = {
+    events: RaceEvent[]
+    selectedId?: string | null
+    onSelect?: (id: string | null) => void
+}
+
+export default function MapView({ events, selectedId = null, onSelect }: Props) {
     const defaultCenter: [number, number] = [48.8566, 2.3522] // Europe center
 
     const bounds: [number, number][] = events
         .filter(e => e.lat && e.lon)
         .map(e => [e.lat!, e.lon!] as [number, number])
+    // refs to marker instances by id
+    const markerRefs = useRef<Record<string, L.Marker>>({})
 
     return (
         <div className="card map-card" style={{ height: '100%' }}>
@@ -74,7 +84,24 @@ export default function MapView({ events }: { events: RaceEvent[] }) {
                         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
                     />
                     {events.map(ev => ev.lat && ev.lon ? (
-                        <Marker key={ev.id} position={[ev.lat, ev.lon]} icon={isSpecialRace(ev.name) ? specialIcon : defaultIcon}>
+                        <Marker
+                            key={ev.id}
+                            position={[ev.lat, ev.lon]}
+                            icon={isSpecialRace(ev.name) ? specialIcon : defaultIcon}
+                            ref={m => {
+                                if (m) markerRefs.current[ev.id] = m as unknown as L.Marker
+                                else delete markerRefs.current[ev.id]
+                            }}
+                            eventHandlers={{
+                                popupopen: () => onSelect && onSelect(ev.id),
+                                click: () => onSelect && onSelect(ev.id),
+                                popupclose: () => {
+                                    if (selectedId === ev.id) {
+                                        onSelect && onSelect(null)
+                                    }
+                                }
+                            }}
+                        >
                             <Popup className="map-popup">
                                 <strong className={isSpecialRace(ev.name) ? 'popup-special' : ''}>{ev.name}</strong>
                                 <div className="muted">{ev.date}</div>
@@ -82,8 +109,27 @@ export default function MapView({ events }: { events: RaceEvent[] }) {
                             </Popup>
                         </Marker>
                     ) : null)}
+                    <MapSelectionHandler markersRef={markerRefs} selectedId={selectedId} />
                 </MapContainer>
             </div>
         </div>
     )
+}
+
+function MapSelectionHandler({ markersRef, selectedId }: { markersRef: React.RefObject<Record<string, L.Marker>>, selectedId?: string | null }) {
+    const map = useMap()
+    useEffect(() => {
+        if (!selectedId) return
+        const marker = markersRef.current[selectedId]
+        if (!marker) return
+
+        // center map on marker and open popup
+        const latlng = marker.getLatLng()
+        map.flyTo(latlng, Math.max(map.getZoom(), 8), { duration: 0.6 })
+        // open popup if available
+        if ((marker as any).openPopup) {
+            ; (marker as any).openPopup()
+        }
+    }, [selectedId, markersRef, map])
+    return null
 }

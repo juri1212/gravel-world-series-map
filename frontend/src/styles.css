@@ -54,6 +54,23 @@ body {
     gap: 6px;
 }
 
+/* Clickable event items (when sidebar selection is available) */
+.event-item--clickable {
+    cursor: pointer;
+    transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.event-item--clickable:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+    transform: translateY(-2px);
+}
+
+/* Selected item styling */
+.event-item--selected {
+    background-color: rgba(124, 92, 255, 0.06);
+    border-left: 3px solid #7c5cff;
+}
+
 .event-name {
     font-weight: 700;
     font-size: 0.98rem;
