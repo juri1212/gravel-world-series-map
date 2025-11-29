@@ -26,6 +26,22 @@ body {
     align-items: stretch;
 }
 
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    left: 12px;
+    top: 12px;
+    z-index: 1200;
+    background: rgba(11, 18, 32, 0.85);
+    color: #e6eef8;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.5);
+}
+
 .sidebar {
     width: var(--sidebar-width);
     padding: 20px;
@@ -42,6 +58,29 @@ body {
     border-radius: 14px;
     overflow: hidden;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.02));
+}
+
+/* Selected event bottom card for mobile */
+.selected-event-card {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 1200;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(11, 18, 32, 0.95);
+    color: #e6eef8;
+    box-shadow: 0 10px 40px rgba(2, 6, 23, 0.6);
+}
+
+/* Close button styling */
+.btn-close {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    color: #e6eef8;
+    padding: 6px 8px;
+    border-radius: 8px;
 }
 
 .event-list {
@@ -208,4 +247,64 @@ body {
 .leaflet-marker-icon.custom-marker-special:hover {
     transform: translateY(-4px) scale(1.06);
     filter: drop-shadow(0 6px 18px rgba(2, 6, 23, 0.5));
+}
+
+/* Responsive: mobile-specific layout */
+@media (max-width: 720px) {
+    .app-root {
+        gap: 0;
+    }
+
+    .mobile-menu-btn {
+        display: block
+    }
+
+    .sidebar {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1100;
+        border-radius: 0;
+        padding: 16px;
+    }
+
+    .map-area {
+        border-radius: 0;
+    }
+
+    /* Make popups small on mobile to avoid overflow */
+    .leaflet-popup-content {
+        font-size: 0.9rem;
+    }
+
+    .leaflet-popup-content-wrapper {
+        max-width: 260px;
+    }
+
+    /* Fullscreen modal for event list */
+    .event-list-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 1300;
+        background: linear-gradient(180deg, rgba(11, 18, 32, 0.98), rgba(11, 18, 32, 0.98));
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-list-modal-header {
+        padding-bottom: 8px;
+    }
+
+    .event-list-modal-body {
+        overflow: auto;
+        padding-top: 8px;
+    }
+
+    .event-list {
+        padding-bottom: 28px
+    }
 }
