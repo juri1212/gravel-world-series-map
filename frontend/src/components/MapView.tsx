@@ -75,7 +75,6 @@ export default function MapView({ events, selectedId = null, onSelect, isMobile 
             <div className="map-header flex-between">
                 <div className="map-title">
                     <strong>Race Map</strong>
-                    <div className="muted">Interactive map of events</div>
                 </div>
             </div>
             <div className="map-body">
