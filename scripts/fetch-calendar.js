@@ -24,6 +24,7 @@ function parseEvents(html) {
     const items = []
     $('.glz-event').each((i, el) => {
         const nameRaw = $(el).find('.event-name').text().trim()
+        const link = $(el).find('a').attr('href') || ''
         const city = $(el).find('.event-city').text().trim()
         const date = $(el).find('.event-date').text().trim()
         const countryImg = $(el).find('.event-country img').attr('src') || ''
@@ -37,7 +38,7 @@ function parseEvents(html) {
         // `nameRaw` can include the city on a new line; take the first line as the event name
         const nameLine = (nameRaw || '').split(/\r?\n/)[0].trim()
         const name = nameLine || city || id
-        items.push({ id, name, date, locationText })
+        items.push({ id, name, date, locationText, link })
     })
     return items
 }

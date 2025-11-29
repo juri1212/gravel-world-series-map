@@ -7,6 +7,7 @@ export type RaceEvent = {
   name: string
   date: string
   locationText?: string
+  link?: string
   lat?: number
   lon?: number
 }
