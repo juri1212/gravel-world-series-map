@@ -1,12 +1,12 @@
 {
-  "fetchedAt": "2025-12-05T03:12:33.505Z",
+  "fetchedAt": "2025-12-06T03:03:27.028Z",
   "events": [
     {
       "id": "ev-0",
       "name": "Flanders Legacy Gravel",
       "date": "Sunday 19 Oct 2025",
       "locationText": "Leuven, BE",
-      "link": "https://ucigravelworldseries.com/en/legacy-gravel/",
+      "link": "https://ucigravelworldseries.com/en/legacy-gravel-2026/",
       "lat": 50.879202,
       "lon": 4.7011675
     },
@@ -367,7 +367,7 @@
       "name": "Tartu Rattamaraton",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
-      "link": "https://tartumaraton.ee/et/tartu-rattamaraton-2026",
+      "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
       "lat": 58.1205041,
       "lon": 26.336015
     },
@@ -412,7 +412,7 @@
       "name": "Alentejo Gravel",
       "date": "Sunday 25 Oct 2026",
       "locationText": "Ourique, PT",
-      "link": "https://ucigravelworldseries.com/en/ourique/",
+      "link": "https://ucigravelworldseries.com/en/ourique-2026/",
       "lat": 37.651112,
       "lon": -8.2237262
     },
@@ -421,7 +421,7 @@
       "name": "Dustman",
       "date": "Sunday 14 Nov 2027",
       "locationText": "Kanchanaburi, TH",
-      "link": "https://ucigravelworldseries.com/en/dustman/",
+      "link": "https://ucigravelworldseries.com/en/dustman-2026/",
       "lat": 14.44019,
       "lon": 99.2676727
     },
