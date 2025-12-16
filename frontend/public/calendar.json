@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2025-12-15T03:23:04.488Z",
+  "fetchedAt": "2025-12-16T03:17:38.552Z",
   "events": [
     {
       "id": "ev-0",
@@ -279,7 +279,7 @@
       "name": "Gravel Weekend",
       "date": "Saturday 08 Aug 2026",
       "locationText": "Tukums, LV",
-      "link": "https://gravelweekend.com/en/",
+      "link": "https://ucigravelworldseries.com/en/tukums/",
       "lat": 56.9669816,
       "lon": 23.1524528
     },
@@ -430,7 +430,7 @@
       "name": "Dustman",
       "date": "Saturday 14 Nov 2026",
       "locationText": "Kanchanaburi, UCI",
-      "link": "https://ucigravelworldseries.com/en/dustman-2026/"
+      "link": "https://bikezone.events/ucigwsdustman/"
     }
   ]
 }
