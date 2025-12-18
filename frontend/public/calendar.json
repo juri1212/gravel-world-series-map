@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2025-12-17T03:19:49.011Z",
+  "fetchedAt": "2025-12-18T03:16:43.856Z",
   "events": [
     {
       "id": "ev-0",
@@ -333,7 +333,7 @@
       "name": "The Wolf",
       "date": "Saturday 05 Sep 2026",
       "locationText": "Dronninglund, DK",
-      "link": "https://www.ulvengravl.dk/",
+      "link": "https://ucigravelworldseries.com/en/dronninglund/",
       "lat": 57.158303,
       "lon": 10.2900877
     },
@@ -424,13 +424,6 @@
       "link": "https://ucigravelworldseries.com/en/ourique-2026/",
       "lat": 37.651112,
       "lon": -8.2237262
-    },
-    {
-      "id": "ev-48",
-      "name": "Dustman",
-      "date": "Saturday 14 Nov 2026",
-      "locationText": "Kanchanaburi, UCI",
-      "link": "https://bikezone.events/ucigwsdustman/"
     }
   ]
 }
