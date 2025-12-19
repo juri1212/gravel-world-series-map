@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2025-12-18T03:16:43.856Z",
+  "fetchedAt": "2025-12-19T03:17:33.913Z",
   "events": [
     {
       "id": "ev-0",
@@ -349,7 +349,7 @@
       "name": "Gravel Chile",
       "date": "Sunday 06 Sep 2026",
       "locationText": "Valdivia, Los Rios, CL",
-      "link": "",
+      "link": "https://ucigravelworldseries.com/en/gravel-chile/",
       "lat": -39.8141262,
       "lon": -73.2459859
     },
