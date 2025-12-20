@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2025-12-19T03:17:33.913Z",
+  "fetchedAt": "2025-12-20T03:08:56.366Z",
   "events": [
     {
       "id": "ev-0",
@@ -424,6 +424,24 @@
       "link": "https://ucigravelworldseries.com/en/ourique-2026/",
       "lat": 37.651112,
       "lon": -8.2237262
+    },
+    {
+      "id": "ev-48",
+      "name": "Dustman",
+      "date": "Saturday 14 Nov 2026",
+      "locationText": "Kanchanaburi, TH",
+      "link": "https://ucigravelworldseries.com/en/dustman-2026/",
+      "lat": 14.44019,
+      "lon": 99.2676727
+    },
+    {
+      "id": "ev-49",
+      "name": "The Gravel of Marathon",
+      "date": "Sunday 15 Nov 2026",
+      "locationText": "Marathon (Attica), GR",
+      "link": "https://ucigravelworldseries.com/en/marathon/",
+      "lat": 38.1532724,
+      "lon": 23.9620892
     }
   ]
 }
