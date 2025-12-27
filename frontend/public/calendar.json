@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2025-12-26T03:18:12.737Z",
+  "fetchedAt": "2025-12-27T03:16:23.937Z",
   "events": [
     {
       "id": "ev-0",
@@ -289,8 +289,8 @@
       "date": "Sunday 09 Aug 2026",
       "locationText": "Medellin, CO",
       "link": "https://ucigravelworldseries.com/en/gravel-medellin/",
-      "lat": 6.2697325,
-      "lon": -75.6025597
+      "lat": 6.2443382,
+      "lon": -75.573553
     },
     {
       "id": "ev-33",
@@ -307,8 +307,8 @@
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
       "link": "https://ucigravelworldseries.com/en/windhoek/",
-      "lat": -22.5335601,
-      "lon": 17.0454775
+      "lat": -22.5776104,
+      "lon": 17.0772739
     },
     {
       "id": "ev-35",
