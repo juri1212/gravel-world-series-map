@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-01-21T03:25:50.455Z",
+  "fetchedAt": "2026-01-22T03:29:38.101Z",
   "events": [
     {
       "id": "ev-0",
@@ -70,8 +70,8 @@
       "date": "Sunday 22 Mar 2026",
       "locationText": "Turnhout, BE",
       "link": "https://ucigravelworldseries.com/en/turnhout/",
-      "lat": 51.3233812,
-      "lon": 4.948461
+      "lat": 51.328932,
+      "lon": 4.9299924
     },
     {
       "id": "ev-8",
