@@ -61,7 +61,7 @@ export default function EventList({ events, onSelect, selectedId = null, fullscr
                                 <div className="event-name">{ev.name}</div>
                                 <div className="event-date muted">{ev.date}</div>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <div style={{ display: 'flex', alignItems: 'flex-end', flexDirection: 'column', gap: '8px' }}>
                                 {special && <div className="badge accent">Championship</div>}
                                 {ev.link && (
                                     <a
@@ -76,6 +76,7 @@ export default function EventList({ events, onSelect, selectedId = null, fullscr
                                         🔗
                                     </a>
                                 )}
+                                {(!ev.lon || !ev.lat) && (<span>📍</span>)}
                             </div>
                         </div>
                         <div className="event-location muted">{ev.locationText || (ev.lat && ev.lon ? `${ev.lat.toFixed(3)}, ${ev.lon.toFixed(3)}` : '')}</div>
