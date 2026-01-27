@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-01-26T03:48:37.137Z",
+  "fetchedAt": "2026-01-27T03:29:43.985Z",
   "events": [
     {
       "id": "ev-0",
@@ -433,6 +433,15 @@
       "link": "https://ucigravelworldseries.com/en/dustman-2026/",
       "lat": 14.44019,
       "lon": 99.2676727
+    },
+    {
+      "id": "ev-49",
+      "name": "The Gravel of Marathon",
+      "date": "Sunday 15 Nov 2026",
+      "locationText": "Marathon (Attica), GR",
+      "link": "https://ucigravelworldseries.com/en/marathon/",
+      "lat": 38.1532724,
+      "lon": 23.9620892
     }
   ]
 }
