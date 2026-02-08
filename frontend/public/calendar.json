@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-07T03:59:03.525Z",
+  "fetchedAt": "2026-02-08T04:25:01.362Z",
   "events": [
     {
       "id": "ev-0",
@@ -231,9 +231,9 @@
     },
     {
       "id": "ev-26",
-      "name": "Ghost of Gravel",
+      "name": "Ghost of The Gravel",
       "date": "Sunday 28 Jun 2026",
-      "locationText": "Water Valley, AL, CA",
+      "locationText": "Water Valley, AB, CA",
       "link": "https://ucigravelworldseries.com/en/ghost-of-gravel/",
       "lat": 51.5039251,
       "lon": -114.6109671
