@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-09T04:15:39.129Z",
+  "fetchedAt": "2026-02-10T04:24:05.329Z",
   "events": [
     {
       "id": "ev-0",
@@ -312,6 +312,15 @@
     },
     {
       "id": "ev-35",
+      "name": "Gravel Classic Yakurai",
+      "date": "Saturday 22 Aug 2026",
+      "locationText": "Kami Town,, JP",
+      "link": "https://ucigravelworldseries.com/en/yakurai/",
+      "lat": 35.4733917,
+      "lon": 134.5946985
+    },
+    {
+      "id": "ev-36",
       "name": "Khomas100",
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
@@ -320,7 +329,7 @@
       "lon": 17.0772739
     },
     {
-      "id": "ev-36",
+      "id": "ev-37",
       "name": "2026 UEC European Gravel Championships",
       "date": "Sunday 30 Aug 2026",
       "locationText": "Houffalize, BE",
@@ -329,7 +338,7 @@
       "lon": 5.7886928
     },
     {
-      "id": "ev-37",
+      "id": "ev-38",
       "name": "Gravel Arteaga Mexico",
       "date": "Sunday 30 Aug 2026",
       "locationText": "Arteaga, Coahuila, MX",
@@ -338,7 +347,7 @@
       "lon": -100.6831723
     },
     {
-      "id": "ev-38",
+      "id": "ev-39",
       "name": "The Wolf",
       "date": "Saturday 05 Sep 2026",
       "locationText": "Dronninglund, DK",
@@ -347,14 +356,14 @@
       "lon": 10.2900877
     },
     {
-      "id": "ev-39",
+      "id": "ev-40",
       "name": "Graean Cymru",
       "date": "Saturday 05 Sep 2026 - 06 Sep 2026",
       "locationText": "Llyn Brenig (Ruthin - Wales), GB",
       "link": "https://ucigravelworldseries.com/en/ruthin/"
     },
     {
-      "id": "ev-40",
+      "id": "ev-41",
       "name": "Gravel Chile",
       "date": "Sunday 06 Sep 2026",
       "locationText": "Valdivia, Los Rios, CL",
@@ -363,7 +372,7 @@
       "lon": -73.2459859
     },
     {
-      "id": "ev-41",
+      "id": "ev-42",
       "name": "Falling Leaves",
       "date": "Saturday 12 Sep 2026",
       "locationText": "Lahti, FI",
@@ -372,7 +381,7 @@
       "lon": 25.6613418
     },
     {
-      "id": "ev-42",
+      "id": "ev-43",
       "name": "Sea Otter Europe Girona",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Girona, ES",
@@ -381,7 +390,7 @@
       "lon": 2.8199439
     },
     {
-      "id": "ev-43",
+      "id": "ev-44",
       "name": "Tartu Rattamaraton",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
@@ -390,7 +399,7 @@
       "lon": 26.336015
     },
     {
-      "id": "ev-44",
+      "id": "ev-45",
       "name": "Mammoth TUFF",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Mammoth Lakes, CA, US",
@@ -399,7 +408,7 @@
       "lon": -118.9668509
     },
     {
-      "id": "ev-45",
+      "id": "ev-46",
       "name": "Pyrénées Catalanes Gravel Tour",
       "date": "Saturday 26 Sep 2026",
       "locationText": "Font Romeu, FR",
@@ -408,7 +417,7 @@
       "lon": 2.0416766
     },
     {
-      "id": "ev-46",
+      "id": "ev-47",
       "name": "UCI Gravel World Championships 2026",
       "date": "Saturday 10 Oct 2026 - 11 Oct 2026",
       "locationText": "Nannup, Western Australia, AU",
@@ -417,7 +426,7 @@
       "lon": 115.7637655
     },
     {
-      "id": "ev-47",
+      "id": "ev-48",
       "name": "Flanders Legacy Gravel",
       "date": "Sunday 18 Oct 2026",
       "locationText": "Leuven, BE",
@@ -426,7 +435,7 @@
       "lon": 4.7011675
     },
     {
-      "id": "ev-48",
+      "id": "ev-49",
       "name": "Alentejo Gravel",
       "date": "Sunday 25 Oct 2026",
       "locationText": "Ourique, PT",
