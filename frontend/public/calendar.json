@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-11T04:21:04.941Z",
+  "fetchedAt": "2026-02-12T04:13:31.383Z",
   "events": [
     {
       "id": "ev-0",
@@ -232,7 +232,7 @@
     {
       "id": "ev-26",
       "name": "Ghost of The Gravel",
-      "date": "Sunday 28 Jun 2026",
+      "date": "Saturday 27 Jun 2026",
       "locationText": "Water Valley, AB, CA",
       "link": "https://ucigravelworldseries.com/en/ghost-of-gravel/",
       "lat": 51.5039251,
@@ -395,8 +395,8 @@
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
       "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1205041,
-      "lon": 26.336015
+      "lat": 58.1395359,
+      "lon": 26.2579349
     },
     {
       "id": "ev-45",
@@ -442,6 +442,33 @@
       "link": "https://ucigravelworldseries.com/en/ourique-2026/",
       "lat": 37.651112,
       "lon": -8.2237262
+    },
+    {
+      "id": "ev-50",
+      "name": "Gravelista",
+      "date": "Sunday 25 Oct 2026",
+      "locationText": "AU",
+      "link": "https://ucigravelworldseries.com/en/seymour/",
+      "lat": -24.7761086,
+      "lon": 134.755
+    },
+    {
+      "id": "ev-51",
+      "name": "Dustman",
+      "date": "Saturday 14 Nov 2026",
+      "locationText": "Kanchanaburi, TH",
+      "link": "https://ucigravelworldseries.com/en/dustman-2026/",
+      "lat": 14.44019,
+      "lon": 99.2676727
+    },
+    {
+      "id": "ev-52",
+      "name": "The Gravel of Marathon",
+      "date": "Sunday 15 Nov 2026",
+      "locationText": "Marathon (Attica), GR",
+      "link": "https://ucigravelworldseries.com/en/marathon/",
+      "lat": 38.1532724,
+      "lon": 23.9620892
     }
   ]
 }
