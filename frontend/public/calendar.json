@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-18T04:10:49.960Z",
+  "fetchedAt": "2026-02-19T04:10:00.468Z",
   "events": [
     {
       "id": "ev-0",
@@ -70,8 +70,8 @@
       "date": "Sunday 22 Mar 2026",
       "locationText": "Turnhout, BE",
       "link": "https://ucigravelworldseries.com/en/turnhout/",
-      "lat": 51.328932,
-      "lon": 4.9299924
+      "lat": 51.3233812,
+      "lon": 4.948461
     },
     {
       "id": "ev-8",
@@ -325,8 +325,8 @@
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
       "link": "https://ucigravelworldseries.com/en/windhoek/",
-      "lat": -22.5335601,
-      "lon": 17.0454775
+      "lat": -22.5776104,
+      "lon": 17.0772739
     },
     {
       "id": "ev-37",
