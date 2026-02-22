@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-21T03:57:26.342Z",
+  "fetchedAt": "2026-02-22T04:07:10.343Z",
   "events": [
     {
       "id": "ev-0",
@@ -325,8 +325,8 @@
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
       "link": "https://ucigravelworldseries.com/en/windhoek/",
-      "lat": -22.5776104,
-      "lon": 17.0772739
+      "lat": -22.5335601,
+      "lon": 17.0454775
     },
     {
       "id": "ev-37",
