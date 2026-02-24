@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-23T04:13:00.205Z",
+  "fetchedAt": "2026-02-24T04:08:40.105Z",
   "events": [
     {
       "id": "ev-0",
@@ -126,7 +126,7 @@
       "name": "Giro Sardegna Gravel",
       "date": "Friday 01 May 2026",
       "locationText": "Muravera-Villasimius, IT",
-      "link": "https://ucigravelworldseries.com/en/orosei/",
+      "link": "https://ucigravelworldseries.com/en/sardegna/",
       "lat": 39.2623411,
       "lon": 9.1746227
     },
@@ -325,8 +325,8 @@
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
       "link": "https://ucigravelworldseries.com/en/windhoek/",
-      "lat": -22.5335601,
-      "lon": 17.0454775
+      "lat": -22.5776104,
+      "lon": 17.0772739
     },
     {
       "id": "ev-37",
