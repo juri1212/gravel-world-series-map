@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-25T04:09:56.837Z",
+  "fetchedAt": "2026-02-26T04:06:37.514Z",
   "events": [
     {
       "id": "ev-0",
@@ -70,8 +70,8 @@
       "date": "Sunday 22 Mar 2026",
       "locationText": "Turnhout, BE",
       "link": "https://ucigravelworldseries.com/en/turnhout/",
-      "lat": 51.3233812,
-      "lon": 4.948461
+      "lat": 51.328932,
+      "lon": 4.9299924
     },
     {
       "id": "ev-8",
@@ -249,7 +249,7 @@
     },
     {
       "id": "ev-28",
-      "name": "The Majestics",
+      "name": "The Majestics Gravel",
       "date": "Sunday 12 Jul 2026",
       "locationText": "Villars, CH",
       "link": "https://ucigravelworldseries.com/en/villars/",
