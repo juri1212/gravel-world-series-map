@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-02-27T04:03:02.625Z",
+  "fetchedAt": "2026-02-28T03:45:23.077Z",
   "events": [
     {
       "id": "ev-0",
@@ -163,8 +163,8 @@
       "date": "Sunday 24 May 2026",
       "locationText": "Chia Bogota, CO",
       "link": "https://ucigravelworldseries.com/en/gravel-bogota/",
-      "lat": 4.8652467,
-      "lon": -74.0381763
+      "lat": 4.8534878,
+      "lon": -74.0300465
     },
     {
       "id": "ev-19",
@@ -395,8 +395,8 @@
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
       "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1395359,
-      "lon": 26.2579349
+      "lat": 58.1205041,
+      "lon": 26.336015
     },
     {
       "id": "ev-45",
