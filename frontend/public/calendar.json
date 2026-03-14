@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-03-13T04:03:25.289Z",
+  "fetchedAt": "2026-03-14T04:01:45.934Z",
   "events": [
     {
       "id": "ev-0",
@@ -145,8 +145,8 @@
       "date": "Saturday 16 May 2026",
       "locationText": "Nannup, WA, AU",
       "link": "https://ucigravelworldseries.com/en/seven/",
-      "lat": -33.9784295,
-      "lon": 115.7637655
+      "lat": -34.154996,
+      "lon": 115.6731528
     },
     {
       "id": "ev-17",
@@ -154,8 +154,8 @@
       "date": "Saturday 16 May 2026",
       "locationText": "Gatehouse of Fleet (Scotland), GB",
       "link": "https://ucigravelworldseries.com/en/galloway/",
-      "lat": 54.8831917,
-      "lon": -4.1815004
+      "lat": 54.8828245,
+      "lon": -4.1824606
     },
     {
       "id": "ev-18",
@@ -222,7 +222,9 @@
       "name": "Ghost of The Gravel",
       "date": "Saturday 27 Jun 2026",
       "locationText": "Water Valley, AB, CA",
-      "link": "https://ucigravelworldseries.com/en/ghost-of-gravel/"
+      "link": "https://ucigravelworldseries.com/en/ghost-of-gravel/",
+      "lat": 51.5039251,
+      "lon": -114.6109671
     },
     {
       "id": "ev-27",
@@ -311,8 +313,8 @@
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
       "link": "https://ucigravelworldseries.com/en/windhoek/",
-      "lat": -22.5776104,
-      "lon": 17.0772739
+      "lat": -22.5335601,
+      "lon": 17.0454775
     },
     {
       "id": "ev-37",
@@ -381,8 +383,8 @@
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
       "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1205041,
-      "lon": 26.336015
+      "lat": 58.1091844,
+      "lon": 26.3653758
     },
     {
       "id": "ev-45",
@@ -398,9 +400,7 @@
       "name": "Pyrénées Catalanes Gravel Tour",
       "date": "Saturday 26 Sep 2026",
       "locationText": "Font Romeu, FR",
-      "link": "https://ucigravelworldseries.com/en/66-degres/",
-      "lat": 42.4965705,
-      "lon": 2.0416766
+      "link": "https://ucigravelworldseries.com/en/66-degres/"
     },
     {
       "id": "ev-47",
