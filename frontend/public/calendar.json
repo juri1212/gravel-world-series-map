@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-03-28T04:09:51.910Z",
+  "fetchedAt": "2026-03-29T04:29:05.826Z",
   "events": [
     {
       "id": "ev-0",
@@ -163,8 +163,8 @@
       "date": "Sunday 24 May 2026",
       "locationText": "Chia Bogota, CO",
       "link": "https://ucigravelworldseries.com/en/gravel-bogota/",
-      "lat": 4.8652467,
-      "lon": -74.0381763
+      "lat": 4.8671447,
+      "lon": -74.0379807
     },
     {
       "id": "ev-19",
@@ -311,8 +311,8 @@
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
       "link": "https://ucigravelworldseries.com/en/windhoek/",
-      "lat": -22.5335601,
-      "lon": 17.0454775
+      "lat": -22.5776104,
+      "lon": 17.0772739
     },
     {
       "id": "ev-37",
