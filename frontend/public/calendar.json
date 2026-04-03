@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-04-02T04:21:55.016Z",
+  "fetchedAt": "2026-04-03T04:20:25.978Z",
   "events": [
     {
       "id": "ev-0",
@@ -163,8 +163,8 @@
       "date": "Sunday 24 May 2026",
       "locationText": "Chia Bogota, CO",
       "link": "https://ucigravelworldseries.com/en/gravel-bogota/",
-      "lat": 4.8652467,
-      "lon": -74.0381763
+      "lat": 4.8671447,
+      "lon": -74.0379807
     },
     {
       "id": "ev-19",
@@ -215,105 +215,135 @@
       "name": "OG Classique",
       "date": "Sunday 21 Jun 2026",
       "locationText": "Wakefield, QC, CA",
-      "link": "https://ucigravelworldseries.com/en/og-classique/"
+      "link": "https://ucigravelworldseries.com/en/og-classique/",
+      "lat": 45.639968,
+      "lon": -75.92926
     },
     {
       "id": "ev-26",
       "name": "Ghost of The Gravel",
       "date": "Saturday 27 Jun 2026",
       "locationText": "Water Valley, AB, CA",
-      "link": "https://ucigravelworldseries.com/en/ghost-of-gravel/"
+      "link": "https://ucigravelworldseries.com/en/ghost-of-gravel/",
+      "lat": 51.5039251,
+      "lon": -114.6109671
     },
     {
       "id": "ev-27",
       "name": "Hegau Gravel Festival",
       "date": "Sunday 05 Jul 2026",
       "locationText": "Singen, DE",
-      "link": "https://ucigravelworldseries.com/en/singen/"
+      "link": "https://ucigravelworldseries.com/en/singen/",
+      "lat": 47.7617515,
+      "lon": 8.8348709
     },
     {
       "id": "ev-28",
       "name": "The Majestics Gravel",
       "date": "Sunday 12 Jul 2026",
       "locationText": "Villars, CH",
-      "link": "https://ucigravelworldseries.com/en/villars/"
+      "link": "https://ucigravelworldseries.com/en/villars/",
+      "lat": 46.791321,
+      "lon": 7.1161892
     },
     {
       "id": "ev-29",
       "name": "3RIDES Gravel",
       "date": "Sunday 19 Jul 2026",
       "locationText": "Winterberg, DE",
-      "link": "https://ucigravelworldseries.com/en/3rides/"
+      "link": "https://ucigravelworldseries.com/en/3rides/",
+      "lat": 51.1933391,
+      "lon": 8.5334064
     },
     {
       "id": "ev-30",
       "name": "Around the Pot",
       "date": "Saturday 25 Jul 2026",
       "locationText": "Swellendam, ZA",
-      "link": "https://ucigravelworldseries.com/en/around-the-pot/"
+      "link": "https://ucigravelworldseries.com/en/around-the-pot/",
+      "lat": -34.021111,
+      "lon": 20.441944
     },
     {
       "id": "ev-31",
       "name": "Gravel Tour Hlinsko",
       "date": "Saturday 01 Aug 2026",
       "locationText": "Hlinsko, CZ",
-      "link": "https://ucigravelworldseries.com/en/gravel-tour-hlinsko/"
+      "link": "https://ucigravelworldseries.com/en/gravel-tour-hlinsko/",
+      "lat": 49.7625672,
+      "lon": 15.907339
     },
     {
       "id": "ev-32",
       "name": "Gravel Weekend",
       "date": "Saturday 08 Aug 2026",
       "locationText": "Tukums, LV",
-      "link": "https://ucigravelworldseries.com/en/tukums/"
+      "link": "https://ucigravelworldseries.com/en/tukums/",
+      "lat": 56.9669816,
+      "lon": 23.1524528
     },
     {
       "id": "ev-33",
       "name": "Gravel Medellin",
       "date": "Sunday 09 Aug 2026",
       "locationText": "Medellin, CO",
-      "link": "https://ucigravelworldseries.com/en/gravel-medellin/"
+      "link": "https://ucigravelworldseries.com/en/gravel-medellin/",
+      "lat": 6.2697325,
+      "lon": -75.6025597
     },
     {
       "id": "ev-34",
       "name": "Gravel Grit ’n Grind",
       "date": "Saturday 15 Aug 2026",
       "locationText": "Halmstad, SE",
-      "link": "https://ucigravelworldseries.com/en/halmstad/"
+      "link": "https://ucigravelworldseries.com/en/halmstad/",
+      "lat": 56.6739826,
+      "lon": 12.8574827
     },
     {
       "id": "ev-35",
       "name": "HYSK Gravel Classic Yakurai presented by GRAVELKING",
       "date": "Saturday 22 Aug 2026",
       "locationText": "Kami Town,, JP",
-      "link": "https://ucigravelworldseries.com/en/yakurai/"
+      "link": "https://ucigravelworldseries.com/en/yakurai/",
+      "lat": 35.4733917,
+      "lon": 134.5946985
     },
     {
       "id": "ev-36",
       "name": "Khomas100",
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
-      "link": "https://ucigravelworldseries.com/en/windhoek/"
+      "link": "https://ucigravelworldseries.com/en/windhoek/",
+      "lat": -22.5776104,
+      "lon": 17.0772739
     },
     {
       "id": "ev-37",
       "name": "2026 UEC Gravel European Championships",
       "date": "Sunday 30 Aug 2026",
       "locationText": "Houffalize, BE",
-      "link": "https://ucigravelworldseries.com/en/houffalize/"
+      "link": "https://ucigravelworldseries.com/en/houffalize/",
+      "lat": 50.1323761,
+      "lon": 5.7886928
     },
     {
       "id": "ev-38",
       "name": "Gravel Arteaga Mexico",
       "date": "Sunday 30 Aug 2026",
       "locationText": "Arteaga, Coahuila, MX",
-      "link": "https://ucigravelworldseries.com/en/arteaga/"
+      "link": "https://ucigravelworldseries.com/en/arteaga/",
+      "lat": 25.3453685,
+      "lon": -100.6831723
     },
     {
       "id": "ev-39",
       "name": "The Wolf",
       "date": "Saturday 05 Sep 2026",
       "locationText": "Dronninglund, DK",
-      "link": "https://ucigravelworldseries.com/en/dronninglund/"
+      "link": "https://ucigravelworldseries.com/en/dronninglund/",
+      "lat": 57.158303,
+      "lon": 10.2900877
     },
     {
       "id": "ev-40",
@@ -327,28 +357,36 @@
       "name": "Gravel Chile",
       "date": "Sunday 06 Sep 2026",
       "locationText": "Valdivia, Los Rios, CL",
-      "link": "https://ucigravelworldseries.com/en/gravel-chile/"
+      "link": "https://ucigravelworldseries.com/en/gravel-chile/",
+      "lat": -39.8141262,
+      "lon": -73.2459859
     },
     {
       "id": "ev-42",
       "name": "Falling Leaves",
       "date": "Saturday 12 Sep 2026",
       "locationText": "Lahti, FI",
-      "link": "https://ucigravelworldseries.com/en/lahti/"
+      "link": "https://ucigravelworldseries.com/en/lahti/",
+      "lat": 60.982628,
+      "lon": 25.6613418
     },
     {
       "id": "ev-43",
       "name": "Sea Otter Europe Girona",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Girona, ES",
-      "link": "https://ucigravelworldseries.com/en/girona/"
+      "link": "https://ucigravelworldseries.com/en/girona/",
+      "lat": 41.9793006,
+      "lon": 2.8199439
     },
     {
       "id": "ev-44",
       "name": "Tartu Rattamaraton",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
-      "link": "https://ucigravelworldseries.com/en/olepaa-elva/"
+      "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
+      "lat": 58.1091844,
+      "lon": 26.3653758
     },
     {
       "id": "ev-45",
