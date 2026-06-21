@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-20T06:10:05.462Z",
+  "fetchedAt": "2026-06-21T06:42:46.494Z",
   "events": [
     {
       "id": "ev-0",
@@ -365,8 +365,8 @@
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
       "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1284322,
-      "lon": 26.2829332
+      "lat": 58.1183207,
+      "lon": 26.343402
     },
     {
       "id": "ev-43",
@@ -404,7 +404,7 @@
     },
     {
       "id": "ev-47",
-      "name": "Flanders Legacy Gravel",
+      "name": "Leuven Legacy Gravel",
       "date": "Sunday 18 Oct 2026",
       "locationText": "Leuven, BE",
       "link": "https://ucigravelworldseries.com/en/legacy-gravel/",
