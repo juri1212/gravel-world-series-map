@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-27T05:45:49.014Z",
+  "fetchedAt": "2026-06-28T06:07:28.667Z",
   "events": [
     {
       "id": "ev-0",
@@ -222,9 +222,7 @@
       "name": "Hegau Gravel Festival",
       "date": "Sunday 05 Jul 2026",
       "locationText": "Singen, DE",
-      "link": "https://ucigravelworldseries.com/en/singen/",
-      "lat": 47.7617515,
-      "lon": 8.8348709
+      "link": "https://ucigravelworldseries.com/en/singen/"
     },
     {
       "id": "ev-27",
@@ -268,8 +266,8 @@
       "date": "Sunday 02 Aug 2026",
       "locationText": "Chia Bogota, CO",
       "link": "https://ucigravelworldseries.com/en/gravel-bogota/",
-      "lat": 4.8577535,
-      "lon": -74.0350214
+      "lat": 4.8652478,
+      "lon": -74.0381764
     },
     {
       "id": "ev-32",
@@ -365,8 +363,8 @@
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
       "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1205041,
-      "lon": 26.336015
+      "lat": 58.1284322,
+      "lon": 26.2829332
     },
     {
       "id": "ev-43",
@@ -400,7 +398,9 @@
       "name": "UCI Gravel World Championships 2026",
       "date": "Saturday 10 Oct 2026 - 11 Oct 2026",
       "locationText": "Nannup, Western Australia, AU",
-      "link": "https://sevengravelrace.com/2026-world-champs/"
+      "link": "https://sevengravelrace.com/2026-world-champs/",
+      "lat": -34.154996,
+      "lon": 115.6731528
     },
     {
       "id": "ev-47",
