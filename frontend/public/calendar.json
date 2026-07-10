@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-09T05:54:34.895Z",
+  "fetchedAt": "2026-07-10T05:53:09.662Z",
   "events": [
     {
       "id": "ev-0",
@@ -222,7 +222,9 @@
       "name": "Hegau Gravel Festival",
       "date": "Sunday 05 Jul 2026",
       "locationText": "Singen, DE",
-      "link": "https://ucigravelworldseries.com/en/singen/"
+      "link": "https://ucigravelworldseries.com/en/singen/",
+      "lat": 47.7617515,
+      "lon": 8.8348709
     },
     {
       "id": "ev-27",
@@ -266,8 +268,8 @@
       "date": "Sunday 02 Aug 2026",
       "locationText": "Chia Bogota, CO",
       "link": "https://ucigravelworldseries.com/en/gravel-bogota/",
-      "lat": 4.8577535,
-      "lon": -74.0350214
+      "lat": 4.8652478,
+      "lon": -74.0381764
     },
     {
       "id": "ev-32",
@@ -363,8 +365,8 @@
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
       "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1284322,
-      "lon": 26.2829332
+      "lat": 58.1183207,
+      "lon": 26.343402
     },
     {
       "id": "ev-43",
@@ -416,7 +418,9 @@
       "name": "Gravelista",
       "date": "Sunday 25 Oct 2026",
       "locationText": "Seymour, AU",
-      "link": "https://ucigravelworldseries.com/en/seymour/"
+      "link": "https://ucigravelworldseries.com/en/seymour/",
+      "lat": -37.0241543,
+      "lon": 145.1362432
     },
     {
       "id": "ev-49",
@@ -441,7 +445,9 @@
       "name": "The Gravel of Marathon",
       "date": "Sunday 15 Nov 2026",
       "locationText": "Marathon (Attica), GR",
-      "link": "https://ucigravelworldseries.com/en/marathon/"
+      "link": "https://ucigravelworldseries.com/en/marathon/",
+      "lat": 38.1572718,
+      "lon": 23.9616545
     }
   ]
 }
