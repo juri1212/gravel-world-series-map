@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-20T05:31:05.543Z",
+  "fetchedAt": "2026-07-21T04:59:02.683Z",
   "events": [
     {
       "id": "ev-0",
@@ -313,28 +313,36 @@
       "name": "Gravel Chile",
       "date": "Saturday 03 Oct 2026",
       "locationText": "Lago Ranco, Valdivia, Los Rios, CL",
-      "link": "https://ucigravelworldseries.com/en/gravel-chile/"
+      "link": "https://ucigravelworldseries.com/en/gravel-chile/",
+      "lat": -39.8371001,
+      "lon": -73.2124774
     },
     {
       "id": "ev-40",
       "name": "Falling Leaves",
       "date": "Saturday 12 Sep 2026",
       "locationText": "Lahti, FI",
-      "link": "https://ucigravelworldseries.com/en/lahti/"
+      "link": "https://ucigravelworldseries.com/en/lahti/",
+      "lat": 60.982628,
+      "lon": 25.6613418
     },
     {
       "id": "ev-41",
       "name": "Sea Otter Europe Girona",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Girona, ES",
-      "link": "https://ucigravelworldseries.com/en/girona/"
+      "link": "https://ucigravelworldseries.com/en/girona/",
+      "lat": 41.9793006,
+      "lon": 2.8199439
     },
     {
       "id": "ev-42",
       "name": "Tartu Rattamaraton",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
-      "link": "https://ucigravelworldseries.com/en/olepaa-elva/"
+      "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
+      "lat": 58.1284322,
+      "lon": 26.2829332
     },
     {
       "id": "ev-43",
