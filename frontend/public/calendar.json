@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-21T04:59:02.683Z",
+  "fetchedAt": "2026-07-22T04:58:23.237Z",
   "events": [
     {
       "id": "ev-0",
@@ -299,7 +299,9 @@
       "name": "The Wolf",
       "date": "Saturday 05 Sep 2026",
       "locationText": "Dronninglund, DK",
-      "link": "https://ucigravelworldseries.com/en/dronninglund/"
+      "link": "https://ucigravelworldseries.com/en/dronninglund/",
+      "lat": 57.158303,
+      "lon": 10.2900877
     },
     {
       "id": "ev-38",
