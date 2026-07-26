@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-25T04:55:35.221Z",
+  "fetchedAt": "2026-07-26T05:19:57.995Z",
   "events": [
     {
       "id": "ev-0",
@@ -180,49 +180,63 @@
       "name": "Wish One Millau Grands Causses",
       "date": "Sunday 14 Jun 2026",
       "locationText": "Millau, FR",
-      "link": "https://ucigravelworldseries.com/en/millau/"
+      "link": "https://ucigravelworldseries.com/en/millau/",
+      "lat": 44.1006693,
+      "lon": 3.0777594
     },
     {
       "id": "ev-21",
       "name": "The Devils Cardigan",
       "date": "Saturday 20 Jun 2026",
       "locationText": "Derby (TAS), AU",
-      "link": "https://ucigravelworldseries.com/en/derby/"
+      "link": "https://ucigravelworldseries.com/en/derby/",
+      "lat": -41.149041,
+      "lon": 147.8009475
     },
     {
       "id": "ev-22",
       "name": "Grand Tour 3 Cime Lavaredo",
       "date": "Saturday 20 Jun 2026",
       "locationText": "Auronzo di Cadore, IT",
-      "link": "https://ucigravelworldseries.com/en/auronzo-di-cadore/"
+      "link": "https://ucigravelworldseries.com/en/auronzo-di-cadore/",
+      "lat": 46.5511562,
+      "lon": 12.4430387
     },
     {
       "id": "ev-23",
       "name": "Eislek Gravel Luxembourg",
       "date": "Sunday 21 Jun 2026",
       "locationText": "Vianden, LU",
-      "link": "https://ucigravelworldseries.com/en/vianden/"
+      "link": "https://ucigravelworldseries.com/en/vianden/",
+      "lat": 49.9389197,
+      "lon": 6.1996446
     },
     {
       "id": "ev-24",
       "name": "OG Classique",
       "date": "Sunday 21 Jun 2026",
       "locationText": "Wakefield, QC, CA",
-      "link": "https://ucigravelworldseries.com/en/og-classique/"
+      "link": "https://ucigravelworldseries.com/en/og-classique/",
+      "lat": 45.639968,
+      "lon": -75.92926
     },
     {
       "id": "ev-25",
       "name": "Ghost of The Gravel",
       "date": "Saturday 27 Jun 2026",
       "locationText": "Water Valley, AB, CA",
-      "link": "https://ucigravelworldseries.com/en/ghost-of-gravel/"
+      "link": "https://ucigravelworldseries.com/en/ghost-of-gravel/",
+      "lat": 51.5039251,
+      "lon": -114.6109671
     },
     {
       "id": "ev-26",
       "name": "Hegau Gravel Festival",
       "date": "Sunday 05 Jul 2026",
       "locationText": "Singen, DE",
-      "link": "https://ucigravelworldseries.com/en/singen/"
+      "link": "https://ucigravelworldseries.com/en/singen/",
+      "lat": 47.7617515,
+      "lon": 8.8348709
     },
     {
       "id": "ev-27",
@@ -266,8 +280,8 @@
       "date": "Sunday 02 Aug 2026",
       "locationText": "Chia Bogota, CO",
       "link": "https://ucigravelworldseries.com/en/gravel-bogota/",
-      "lat": 4.8652478,
-      "lon": -74.0381764
+      "lat": 4.8577535,
+      "lon": -74.0350214
     },
     {
       "id": "ev-32",
@@ -344,18 +358,14 @@
       "name": "Sea Otter Europe Girona",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Girona, ES",
-      "link": "https://ucigravelworldseries.com/en/girona/",
-      "lat": 41.9793006,
-      "lon": 2.8199439
+      "link": "https://ucigravelworldseries.com/en/girona/"
     },
     {
       "id": "ev-41",
       "name": "Tartu Rattamaraton",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
-      "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1205041,
-      "lon": 26.336015
+      "link": "https://ucigravelworldseries.com/en/olepaa-elva/"
     },
     {
       "id": "ev-42",
@@ -416,7 +426,9 @@
       "name": "Gravelista",
       "date": "Sunday 25 Oct 2026",
       "locationText": "Seymour, AU",
-      "link": "https://ucigravelworldseries.com/en/seymour/"
+      "link": "https://ucigravelworldseries.com/en/seymour/",
+      "lat": -37.0241543,
+      "lon": 145.1362432
     },
     {
       "id": "ev-49",
@@ -441,7 +453,9 @@
       "name": "The Gravel of Marathon",
       "date": "Sunday 15 Nov 2026",
       "locationText": "Marathon (Attica), GR",
-      "link": "https://ucigravelworldseries.com/en/marathon/"
+      "link": "https://ucigravelworldseries.com/en/marathon/",
+      "lat": 38.1572718,
+      "lon": 23.9616545
     }
   ]
 }
