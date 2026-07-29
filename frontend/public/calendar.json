@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-28T04:54:12.558Z",
+  "fetchedAt": "2026-07-29T04:59:03.619Z",
   "events": [
     {
       "id": "ev-0",
@@ -271,14 +271,18 @@
       "name": "HYSK Gravel Classic Yakurai presented by GRAVELKING",
       "date": "Saturday 22 Aug 2026",
       "locationText": "Kami Town, JP",
-      "link": "https://ucigravelworldseries.com/en/yakurai/"
+      "link": "https://ucigravelworldseries.com/en/yakurai/",
+      "lat": 35.4733917,
+      "lon": 134.5946985
     },
     {
       "id": "ev-34",
       "name": "Khomas100",
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
-      "link": "https://ucigravelworldseries.com/en/windhoek/"
+      "link": "https://ucigravelworldseries.com/en/windhoek/",
+      "lat": -22.5776104,
+      "lon": 17.0772739
     },
     {
       "id": "ev-35",
@@ -338,8 +342,8 @@
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
       "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1205041,
-      "lon": 26.336015
+      "lat": 58.1245157,
+      "lon": 26.3237045
     },
     {
       "id": "ev-42",
