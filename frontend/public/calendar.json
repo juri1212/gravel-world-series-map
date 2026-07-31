@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T04:47:17.841Z",
+  "fetchedAt": "2026-07-31T05:25:09.937Z",
   "events": [
     {
       "id": "ev-0",
@@ -285,27 +285,21 @@
       "name": "2026 UEC Gravel European Championships",
       "date": "Sunday 30 Aug 2026",
       "locationText": "Houffalize, BE",
-      "link": "https://ucigravelworldseries.com/en/houffalize/",
-      "lat": 50.1323761,
-      "lon": 5.7886928
+      "link": "https://ucigravelworldseries.com/en/houffalize/"
     },
     {
       "id": "ev-36",
       "name": "Gravel Arteaga Mexico",
       "date": "Sunday 30 Aug 2026",
       "locationText": "Arteaga, Coahuila, MX",
-      "link": "https://ucigravelworldseries.com/en/arteaga/",
-      "lat": 25.3453685,
-      "lon": -100.6831723
+      "link": "https://ucigravelworldseries.com/en/arteaga/"
     },
     {
       "id": "ev-37",
       "name": "The Wolf",
       "date": "Saturday 05 Sep 2026",
       "locationText": "Dronninglund, DK",
-      "link": "https://ucigravelworldseries.com/en/dronninglund/",
-      "lat": 57.158303,
-      "lon": 10.2900877
+      "link": "https://ucigravelworldseries.com/en/dronninglund/"
     },
     {
       "id": "ev-38",
