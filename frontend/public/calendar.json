@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-12T03:54:30.833Z",
+  "fetchedAt": "2026-08-13T03:58:50.837Z",
   "events": [
     {
       "id": "ev-0",
@@ -180,14 +180,18 @@
       "name": "Wish One Millau Grands Causses",
       "date": "Sunday 14 Jun 2026",
       "locationText": "Millau, FR",
-      "link": "https://ucigravelworldseries.com/en/millau/"
+      "link": "https://ucigravelworldseries.com/en/millau/",
+      "lat": 44.1006693,
+      "lon": 3.0777594
     },
     {
       "id": "ev-21",
       "name": "The Devils Cardigan",
       "date": "Saturday 20 Jun 2026",
       "locationText": "Derby (TAS), AU",
-      "link": "https://ucigravelworldseries.com/en/derby/"
+      "link": "https://ucigravelworldseries.com/en/derby/",
+      "lat": -41.149041,
+      "lon": 147.8009475
     },
     {
       "id": "ev-22",
@@ -354,18 +358,14 @@
       "name": "Sea Otter Europe Girona",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Girona, ES",
-      "link": "https://ucigravelworldseries.com/en/girona/",
-      "lat": 41.9793006,
-      "lon": 2.8199439
+      "link": "https://ucigravelworldseries.com/en/girona/"
     },
     {
       "id": "ev-41",
       "name": "Tartu Rattamaraton",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
-      "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1284322,
-      "lon": 26.2829332
+      "link": "https://ucigravelworldseries.com/en/olepaa-elva/"
     },
     {
       "id": "ev-42",
