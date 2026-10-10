@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-09T08:08:17.653Z",
+  "fetchedAt": "2026-10-10T07:52:53.961Z",
   "events": [
     {
       "id": "ev-0",
@@ -222,9 +222,7 @@
       "name": "Hegau Gravel Festival",
       "date": "Sunday 05 Jul 2026",
       "locationText": "Singen, DE",
-      "link": "https://ucigravelworldseries.com/en/singen/",
-      "lat": 47.7617515,
-      "lon": 8.8348709
+      "link": "https://ucigravelworldseries.com/en/singen/"
     },
     {
       "id": "ev-27",
@@ -268,8 +266,8 @@
       "date": "Sunday 02 Aug 2026",
       "locationText": "Chia Bogota, CO",
       "link": "https://ucigravelworldseries.com/en/gravel-bogota/",
-      "lat": 4.8534878,
-      "lon": -74.0300465
+      "lat": 4.8577535,
+      "lon": -74.0350214
     },
     {
       "id": "ev-32",
@@ -409,7 +407,9 @@
       "name": "Gravelista",
       "date": "Sunday 25 Oct 2026",
       "locationText": "Seymour, AU",
-      "link": "https://ucigravelworldseries.com/en/seymour/"
+      "link": "https://ucigravelworldseries.com/en/seymour/",
+      "lat": -37.0241543,
+      "lon": 145.1362432
     },
     {
       "id": "ev-48",
@@ -434,14 +434,18 @@
       "name": "The Gravel of Marathon",
       "date": "Sunday 15 Nov 2026",
       "locationText": "Marathon (Attica), GR",
-      "link": "https://ucigravelworldseries.com/en/marathon/"
+      "link": "https://ucigravelworldseries.com/en/marathon/",
+      "lat": 38.1572718,
+      "lon": 23.9616545
     },
     {
       "id": "ev-51",
       "name": "Gravel Chile",
       "date": "Postponed",
       "locationText": "Lago Ranco, Valdivia, Los Rios, CL",
-      "link": "https://ucigravelworldseries.com/en/gravel-chile/"
+      "link": "https://ucigravelworldseries.com/en/gravel-chile/",
+      "lat": -39.8371001,
+      "lon": -73.2124774
     }
   ]
 }
