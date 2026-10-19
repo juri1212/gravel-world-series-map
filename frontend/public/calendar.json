@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-18T06:47:11.131Z",
+  "fetchedAt": "2026-10-19T07:04:47.889Z",
   "events": [
     {
       "id": "ev-0",
@@ -221,28 +221,36 @@
       "name": "Safari Gravel Race",
       "date": "Saturday 13 Jun 2026",
       "locationText": "Hell’s Gate, Naivasha, KE",
-      "link": "https://ucigravelworldseries.com/en/naivasha/"
+      "link": "https://ucigravelworldseries.com/en/naivasha/",
+      "lat": -0.8896355,
+      "lon": 36.3188478
     },
     {
       "id": "ev-26",
       "name": "Wish One Millau Grands Causses",
       "date": "Sunday 14 Jun 2026",
       "locationText": "Millau, FR",
-      "link": "https://ucigravelworldseries.com/en/millau/"
+      "link": "https://ucigravelworldseries.com/en/millau/",
+      "lat": 44.1006693,
+      "lon": 3.0777594
     },
     {
       "id": "ev-27",
       "name": "The Devils Cardigan",
       "date": "Saturday 20 Jun 2026",
       "locationText": "Derby (TAS), AU",
-      "link": "https://ucigravelworldseries.com/en/derby/"
+      "link": "https://ucigravelworldseries.com/en/derby/",
+      "lat": -41.149041,
+      "lon": 147.8009475
     },
     {
       "id": "ev-28",
       "name": "Grand Tour 3 Cime Lavaredo",
       "date": "Saturday 20 Jun 2026",
       "locationText": "Auronzo di Cadore, IT",
-      "link": "https://ucigravelworldseries.com/en/auronzo-di-cadore/"
+      "link": "https://ucigravelworldseries.com/en/auronzo-di-cadore/",
+      "lat": 46.5511562,
+      "lon": 12.4430387
     },
     {
       "id": "ev-29",
@@ -349,8 +357,8 @@
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
       "link": "https://ucigravelworldseries.com/en/windhoek/",
-      "lat": -22.5335601,
-      "lon": 17.0454775
+      "lat": -22.5776104,
+      "lon": 17.0772739
     },
     {
       "id": "ev-41",
@@ -391,27 +399,21 @@
       "name": "Falling Leaves",
       "date": "Saturday 12 Sep 2026",
       "locationText": "Lahti, FI",
-      "link": "https://ucigravelworldseries.com/en/lahti/",
-      "lat": 60.982628,
-      "lon": 25.6613418
+      "link": "https://ucigravelworldseries.com/en/lahti/"
     },
     {
       "id": "ev-46",
       "name": "Sea Otter Europe Girona",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Girona, ES",
-      "link": "https://ucigravelworldseries.com/en/girona/",
-      "lat": 41.9793006,
-      "lon": 2.8199439
+      "link": "https://ucigravelworldseries.com/en/girona/"
     },
     {
       "id": "ev-47",
       "name": "Tartu Rattamaraton",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
-      "link": "https://ucigravelworldseries.com/en/olepaa-elva/",
-      "lat": 58.1284322,
-      "lon": 26.2829332
+      "link": "https://ucigravelworldseries.com/en/olepaa-elva/"
     },
     {
       "id": "ev-48",
@@ -427,21 +429,27 @@
       "name": "Gravel Grit ’n Grind",
       "date": "Saturday 26 Sep 2026",
       "locationText": "Halmstad, SE",
-      "link": "https://ucigravelworldseries.com/en/halmstad/"
+      "link": "https://ucigravelworldseries.com/en/halmstad/",
+      "lat": 56.6739826,
+      "lon": 12.8574827
     },
     {
       "id": "ev-50",
       "name": "Pyrénées Catalanes Gravel Tour",
       "date": "Saturday 26 Sep 2026",
       "locationText": "Font Romeu, FR",
-      "link": "https://ucigravelworldseries.com/en/66-degres/"
+      "link": "https://ucigravelworldseries.com/en/66-degres/",
+      "lat": 42.4965705,
+      "lon": 2.0416766
     },
     {
       "id": "ev-51",
       "name": "UCI Gravel World Championships 2026",
       "date": "Saturday 10 Oct 2026 - 11 Oct 2026",
       "locationText": "Nannup, Western Australia, AU",
-      "link": "https://sevengravelrace.com/2026-world-champs/"
+      "link": "https://sevengravelrace.com/2026-world-champs/",
+      "lat": -34.154996,
+      "lon": 115.6731528
     }
   ]
 }
