@@ -1,28 +1,28 @@
-import React from 'react';
+import { ListIcon, MapIcon } from './Icons'
 
 type Props = {
     onToggleMenu?: () => void
     menuOpen?: boolean
 }
 
-const Header: React.FC<Props> = ({ onToggleMenu, menuOpen = false }) => {
+export default function Header({ onToggleMenu, menuOpen = false }: Props) {
     return (
         <header className="site-header">
-            <div className="header-inner">
-                <h1 className="site-title">Gravel World Series {menuOpen ? 'Events' : 'Map'}</h1>
-                <button
-                    className={`mobile-menu ${menuOpen ? 'open' : ''}`}
-                    aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-                    onClick={() => onToggleMenu && onToggleMenu()}
-                    aria-expanded={menuOpen}
-                >
-                    <span className="bar bar-1" aria-hidden />
-                    <span className="bar bar-2" aria-hidden />
-                    <span className="bar bar-3" aria-hidden />
-                </button>
+            <img className="brand-logo" src={`${import.meta.env.BASE_URL}favicon128.png`} alt="" width={36} height={36} />
+            <div className="brand-text">
+                <h1 className="site-title">Gravel World Series</h1>
+                <p className="site-subtitle">UCI race calendar &amp; map</p>
             </div>
+            <button
+                type="button"
+                className="mobile-toggle"
+                aria-label={menuOpen ? 'Show map' : 'Show event list'}
+                aria-expanded={menuOpen}
+                onClick={onToggleMenu}
+            >
+                {menuOpen ? <MapIcon /> : <ListIcon />}
+                <span>{menuOpen ? 'Map' : 'Events'}</span>
+            </button>
         </header>
-    );
-};
-
-export default Header;
+    )
+}

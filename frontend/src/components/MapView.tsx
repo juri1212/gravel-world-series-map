@@ -1,67 +1,39 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, ZoomControl, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import type { RaceEvent } from '../App'
 import { useEffect, useRef } from 'react'
-import { useMap } from 'react-leaflet'
+import { isPast, isSpecialRace, type RaceEvent } from '../lib/events'
+import { ExternalIcon } from './Icons'
 
-type IconDefaultPrototype = { _getIconUrl?: () => string | undefined }
-delete (L.Icon.Default.prototype as unknown as IconDefaultPrototype)._getIconUrl
-L.Icon.Default.mergeOptions({
-    iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-    iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-    shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-})
-
-const SPECIAL_RACES = [
-    'UEC European Gravel Championships',
-    'UCI Gravel World Championships',
-]
-
-function isSpecialRace(name?: string) {
-    if (!name) return false
-    return SPECIAL_RACES.some(s => name.includes(s))
+// Pure-CSS pins (styled in styles.css) so they follow the theme and selection state
+function markerIcon(special: boolean, selected: boolean, past: boolean) {
+    const cls = ['race-marker', special && 'is-special', selected && 'is-selected', past && 'is-past'].filter(Boolean).join(' ')
+    return L.divIcon({
+        className: 'race-marker-wrap',
+        html: `<span class="${cls}"></span>`,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+        popupAnchor: [0, -4],
+    })
 }
 
-// Custom SVG marker generators (small modern marker)
-function svgDataUrl(circleColor: string, strokeColor = 'rgba(0,0,0,0.15)') {
-    const svg = encodeURIComponent(`
-            <svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'>
-                <defs>
-                    <filter id='f' x='-50%' y='-50%' width='200%' height='200%'>
-                        <feDropShadow dx='0' dy='2' stdDeviation='2' flood-color='${strokeColor}' flood-opacity='0.6'/>
-                    </filter>
-                </defs>
-                <circle cx='14' cy='10' r='7' fill='${circleColor}' stroke='rgba(255,255,255,0.06)' stroke-width='1' filter='url(#f)' />
-            </svg>
-        `)
-    return `data:image/svg+xml;charset=UTF-8,${svg}`
+const TILES = {
+    light: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    dark: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
 }
 
-const defaultIcon = new L.Icon({
-    iconUrl: svgDataUrl('#7c5cff'),
-    iconSize: [28, 28],
-    iconAnchor: [14, 14],
-    popupAnchor: [0, -12],
-    className: 'custom-marker-default'
-})
-
-const specialIcon = new L.Icon({
-    iconUrl: svgDataUrl('#00d4a2'),
-    iconSize: [28, 28],
-    iconAnchor: [14, 14],
-    popupAnchor: [0, -12],
-    className: 'custom-marker-special'
-})
+// Keep fitted markers clear of the floating panel (desktop) or header (mobile)
+const PANEL_PADDING = 420
 
 type Props = {
     events: RaceEvent[]
     selectedId?: string | null
     onSelect?: (id: string | null) => void
     isMobile?: boolean
+    isDark?: boolean
 }
 
-export default function MapView({ events, selectedId = null, onSelect, isMobile = false }: Props) {
+export default function MapView({ events, selectedId = null, onSelect, isMobile = false, isDark = false }: Props) {
     const defaultCenter: [number, number] = [48.8566, 2.3522] // Europe center
 
     const bounds: [number, number][] = events
@@ -71,65 +43,65 @@ export default function MapView({ events, selectedId = null, onSelect, isMobile 
     const markerRefs = useRef<Record<string, L.Marker | null>>({})
 
     return (
-        <div className="card map-card">
-            <div className="map-header flex-between">
-                <div className="map-title">
-                    <strong>Race Map</strong>
-                </div>
-            </div>
-            <div className="map-body">
-                <MapContainer center={defaultCenter} zoom={4} style={{ height: '100%', width: '100%' }}>
-                    <TileLayer
-                        attribution='Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'
-                        url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
-                        maxZoom={16}
-                    />
-                    {events.map(ev => ev.lat && ev.lon ? (
-                        <Marker
-                            key={ev.id}
-                            position={[ev.lat, ev.lon]}
-                            icon={isSpecialRace(ev.name) ? specialIcon : defaultIcon}
-                            ref={m => {
-                                if (m) markerRefs.current[ev.id] = m as L.Marker
-                                else markerRefs.current[ev.id] = null
-                            }}
-                            eventHandlers={{
-                                click: () => onSelect && onSelect(ev.id),
-                                // avoid opening popups on mobile; parent will show bottom card
-                                popupopen: (e: L.LeafletEvent) => {
-                                    if (isMobile) {
-                                        try { (e.target as unknown as L.Marker).closePopup() } catch { void 0 }
-                                    } else {
-                                        if (onSelect) onSelect(ev.id)
-                                    }
-                                },
-                                // only clear selection when popup is closed on non-mobile
-                                popupclose: () => {
-                                    if (isMobile) return
-                                    if (selectedId === ev.id) {
-                                        if (onSelect) onSelect(null)
-                                    }
-                                }
-                            }}
-                        >
-                            <Popup className="map-popup">
-                                <strong className={isSpecialRace(ev.name) ? 'popup-special' : ''}>{ev.name}</strong>
-                                <div className="muted">{ev.date}</div>
-                                {ev.locationText && <div className="muted">{ev.locationText}</div>}
-                            </Popup>
-                        </Marker>
-                    ) : null)}
-                    <FitBounds bounds={bounds} />
-                    <MapSelectionHandler markersRef={markerRefs} selectedId={selectedId} isMobile={isMobile} />
-                </MapContainer>
-            </div>
-        </div>
+        <MapContainer center={defaultCenter} zoom={4} zoomControl={false} worldCopyJump style={{ height: '100%', width: '100%' }}>
+            <TileLayer
+                key={isDark ? 'dark' : 'light'}
+                attribution='Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'
+                url={isDark ? TILES.dark : TILES.light}
+                maxZoom={16}
+            />
+            <ZoomControl position="bottomright" />
+            {events.map(ev => ev.lat && ev.lon ? (
+                <Marker
+                    key={ev.id}
+                    position={[ev.lat, ev.lon]}
+                    icon={markerIcon(isSpecialRace(ev.name), selectedId === ev.id, isPast(ev))}
+                    zIndexOffset={selectedId === ev.id ? 1000 : isSpecialRace(ev.name) ? 500 : 0}
+                    ref={m => {
+                        if (m) markerRefs.current[ev.id] = m as L.Marker
+                        else markerRefs.current[ev.id] = null
+                    }}
+                    eventHandlers={{
+                        click: () => onSelect && onSelect(ev.id),
+                        // avoid opening popups on mobile; parent will show bottom card
+                        popupopen: (e: L.LeafletEvent) => {
+                            if (isMobile) {
+                                try { (e.target as unknown as L.Marker).closePopup() } catch { void 0 }
+                            } else {
+                                if (onSelect) onSelect(ev.id)
+                            }
+                        },
+                        // only clear selection when popup is closed on non-mobile
+                        popupclose: () => {
+                            if (isMobile) return
+                            if (selectedId === ev.id) {
+                                if (onSelect) onSelect(null)
+                            }
+                        }
+                    }}
+                >
+                    <Popup className="map-popup" closeButton={false}>
+                        {isSpecialRace(ev.name) && <div className="map-popup-eyebrow">Championship</div>}
+                        <div className="map-popup-title">{ev.name}</div>
+                        <div className="map-popup-meta">{ev.date}</div>
+                        {ev.locationText && <div className="map-popup-meta">{ev.locationText}</div>}
+                        {ev.link && (
+                            <a className="map-popup-link" href={ev.link} target="_blank" rel="noopener noreferrer">
+                                Event page <ExternalIcon />
+                            </a>
+                        )}
+                    </Popup>
+                </Marker>
+            ) : null)}
+            <FitBounds bounds={bounds} isMobile={isMobile} />
+            <MapSelectionHandler markersRef={markerRefs} selectedId={selectedId} isMobile={isMobile} />
+        </MapContainer>
     )
 }
 
 // MapContainer only reads `bounds` on mount, but events arrive asynchronously and
 // change with the season filter, so refit whenever the set of coordinates changes.
-function FitBounds({ bounds }: { bounds: [number, number][] }) {
+function FitBounds({ bounds, isMobile }: { bounds: [number, number][], isMobile: boolean }) {
     const map = useMap()
     const key = JSON.stringify(bounds)
     useEffect(() => {
@@ -137,8 +109,12 @@ function FitBounds({ bounds }: { bounds: [number, number][] }) {
         // container size may have changed after layout (sidebar, header)
         map.invalidateSize()
         if (!points.length) return
-        map.fitBounds(points, { padding: [40, 40], maxZoom: 8 })
-    }, [map, key])
+        map.fitBounds(points, {
+            paddingTopLeft: isMobile ? [32, 110] : [PANEL_PADDING, 48],
+            paddingBottomRight: [48, 48],
+            maxZoom: 8,
+        })
+    }, [map, key, isMobile])
     return null
 }
 
