@@ -78,7 +78,7 @@ export default function MapView({ events, selectedId = null, onSelect, isMobile 
                 </div>
             </div>
             <div className="map-body">
-                <MapContainer center={defaultCenter} zoom={4} style={{ height: '100%', width: '100%' }} bounds={bounds.length ? bounds as L.LatLngBoundsExpression : undefined}>
+                <MapContainer center={defaultCenter} zoom={4} style={{ height: '100%', width: '100%' }}>
                     <TileLayer
                         attribution='&copy; <a href="https://carto.com/attributions">Carto</a> &mdash; © OpenStreetMap contributors'
                         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
@@ -118,11 +118,27 @@ export default function MapView({ events, selectedId = null, onSelect, isMobile 
                             </Popup>
                         </Marker>
                     ) : null)}
+                    <FitBounds bounds={bounds} />
                     <MapSelectionHandler markersRef={markerRefs} selectedId={selectedId} isMobile={isMobile} />
                 </MapContainer>
             </div>
         </div>
     )
+}
+
+// MapContainer only reads `bounds` on mount, but events arrive asynchronously and
+// change with the season filter, so refit whenever the set of coordinates changes.
+function FitBounds({ bounds }: { bounds: [number, number][] }) {
+    const map = useMap()
+    const key = JSON.stringify(bounds)
+    useEffect(() => {
+        const points = JSON.parse(key) as [number, number][]
+        // container size may have changed after layout (sidebar, header)
+        map.invalidateSize()
+        if (!points.length) return
+        map.fitBounds(points, { padding: [40, 40], maxZoom: 8 })
+    }, [map, key])
+    return null
 }
 
 function MapSelectionHandler({ markersRef, selectedId, isMobile }: { markersRef: React.RefObject<Record<string, L.Marker | null>>, selectedId?: string | null, isMobile?: boolean }) {

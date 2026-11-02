@@ -7,10 +7,57 @@ export type RaceEvent = {
   id: string
   name: string
   date: string
+  season?: string
   locationText?: string
   link?: string
   lat?: number
   lon?: number
+}
+
+function extractYear(dateStr: string): string | null {
+  if (!dateStr) return null
+
+  // If it contains a range like "10 Oct 2026 - 11 Oct 2026", take the first or last parsable year.
+  const parts = dateStr.split(/[-–—]/).map(p => p.trim()).filter(Boolean)
+
+  for (const part of parts) {
+    // Try ISO / regular Date parse first
+    const d = new Date(part)
+    if (!isNaN(d.getTime())) return d.getFullYear().toString()
+
+    // Try to parse formats like '10 Oct 2026' using a temporary parse by adding a time
+    const tryParse = Date.parse(part)
+    if (!isNaN(tryParse)) return new Date(tryParse).getFullYear().toString()
+  }
+
+  // Fallback: look for a 4-digit year in the string
+  const m = dateStr.match(/(20\d{2}|19\d{2})/)
+  return m ? m[0] : null
+}
+
+// Parse a representative Date from various date strings.
+// For ranges like "10 Oct 2026 - 11 Oct 2026" this returns the first valid date.
+function parseRepresentativeDate(dateStr: string): Date | null {
+  if (!dateStr) return null
+  const parts = dateStr.split(/[-–—]/).map(p => p.trim()).filter(Boolean)
+
+  for (const part of parts) {
+    const d = new Date(part)
+    if (!isNaN(d.getTime())) return d
+
+    const parsed = Date.parse(part)
+    if (!isNaN(parsed)) return new Date(parsed)
+  }
+
+  // Fallback: try to extract a 4-digit year and return Jan 1 of that year
+  const m = dateStr.match(/(20\d{2}|19\d{2})/)
+  if (m) return new Date(Number(m[0]), 0, 1)
+  return null
+}
+
+// Events are grouped by UCI season (e.g. Oct 2026 races qualify for the 2027 season)
+function seasonOf(ev: RaceEvent): string | null {
+  return ev.season || extractYear(ev.date)
 }
 
 function App() {
@@ -40,48 +87,7 @@ function App() {
     fetchEvents()
   }, [])
 
-  function extractYear(dateStr: string): string | null {
-    if (!dateStr) return null
-
-    // If it contains a range like "10 Oct 2026 - 11 Oct 2026", take the first or last parsable year.
-    const parts = dateStr.split(/[-–—]/).map(p => p.trim()).filter(Boolean)
-
-    for (const part of parts) {
-      // Try ISO / regular Date parse first
-      const d = new Date(part)
-      if (!isNaN(d.getTime())) return d.getFullYear().toString()
-
-      // Try to parse formats like '10 Oct 2026' using a temporary parse by adding a time
-      const tryParse = Date.parse(part)
-      if (!isNaN(tryParse)) return new Date(tryParse).getFullYear().toString()
-    }
-
-    // Fallback: look for a 4-digit year in the string
-    const m = dateStr.match(/(20\d{2}|19\d{2})/)
-    return m ? m[0] : null
-  }
-
-  // Parse a representative Date from various date strings.
-  // For ranges like "10 Oct 2026 - 11 Oct 2026" this returns the first valid date.
-  function parseRepresentativeDate(dateStr: string): Date | null {
-    if (!dateStr) return null
-    const parts = dateStr.split(/[-–—]/).map(p => p.trim()).filter(Boolean)
-
-    for (const part of parts) {
-      const d = new Date(part)
-      if (!isNaN(d.getTime())) return d
-
-      const parsed = Date.parse(part)
-      if (!isNaN(parsed)) return new Date(parsed)
-    }
-
-    // Fallback: try to extract a 4-digit year and return Jan 1 of that year
-    const m = dateStr.match(/(20\d{2}|19\d{2})/)
-    if (m) return new Date(Number(m[0]), 0, 1)
-    return null
-  }
-
-  // When events load, preselect the year that contains the next upcoming race (if any)
+  // When events load, preselect the season that contains the next upcoming race (if any)
   useEffect(() => {
     if (!events.length) return
     const now = new Date()
@@ -91,17 +97,14 @@ function App() {
       .sort((a, b) => (a.d!.getTime() - b.d!.getTime()))
 
     if (upcoming.length) {
-      const y = upcoming[0].d!.getFullYear().toString()
-      setYear(y)
+      const y = seasonOf(upcoming[0].e)
+      if (y) setYear(y)
     }
   }, [events])
 
-  const years = Array.from(new Set(events.map(e => extractYear(e.date)).filter(Boolean) as string[])).sort((a, b) => Number(b) - Number(a))
+  const years = Array.from(new Set(events.map(seasonOf).filter(Boolean) as string[])).sort((a, b) => Number(b) - Number(a))
 
-  const filteredEvents = year === 'all' ? events : events.filter(e => {
-    const y = extractYear(e.date)
-    return y === year
-  })
+  const filteredEvents = year === 'all' ? events : events.filter(e => seasonOf(e) === year)
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -124,7 +127,7 @@ function App() {
         <h2>Calendar</h2>
         {loading && <p>Loading events…</p>}
         <div className="year-select">
-          <label htmlFor="year">Year: </label>
+          <label htmlFor="year">Season: </label>
           <select id="year" value={year} onChange={e => setYear(e.target.value)}>
             <option value="all">All</option>
             {years.map(y => (

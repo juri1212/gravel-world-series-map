@@ -1,8 +1,9 @@
 {
-  "fetchedAt": "2026-11-01T08:20:22.182Z",
+  "fetchedAt": "2026-11-02T08:25:25.099Z",
   "events": [
     {
-      "id": "ev-0",
+      "id": "2027-legacy-gravel-2026",
+      "season": "2027",
       "name": "Leuven Legacy Gravel",
       "date": "Sunday 18 Oct 2026",
       "locationText": "Leuven, BE",
@@ -11,7 +12,8 @@
       "lon": 4.7011675
     },
     {
-      "id": "ev-1",
+      "id": "2027-seymour",
+      "season": "2027",
       "name": "Gravelista",
       "date": "Sunday 25 Oct 2026",
       "locationText": "Seymour, AU",
@@ -20,7 +22,8 @@
       "lon": 145.1362432
     },
     {
-      "id": "ev-2",
+      "id": "2027-ourique-2026",
+      "season": "2027",
       "name": "Alentejo Gravel",
       "date": "Sunday 25 Oct 2026",
       "locationText": "Ourique, PT",
@@ -29,7 +32,8 @@
       "lon": -8.2237262
     },
     {
-      "id": "ev-3",
+      "id": "2027-dustman-2026",
+      "season": "2027",
       "name": "Dustman",
       "date": "Saturday 14 Nov 2026",
       "locationText": "Kanchanaburi, TH",
@@ -38,7 +42,8 @@
       "lon": 99.2676727
     },
     {
-      "id": "ev-4",
+      "id": "2027-marathon",
+      "season": "2027",
       "name": "The Gravel of Marathon",
       "date": "Sunday 15 Nov 2026",
       "locationText": "Marathon (Attica), GR",
@@ -47,7 +52,8 @@
       "lon": 23.9616545
     },
     {
-      "id": "ev-5",
+      "id": "2027-gravel-chile",
+      "season": "2027",
       "name": "Gravel Chile",
       "date": "Postponed",
       "locationText": "Lago Ranco, Valdivia, Los Rios, CL",
@@ -56,7 +62,8 @@
       "lon": -73.2124774
     },
     {
-      "id": "ev-6",
+      "id": "2026-legacy-gravel",
+      "season": "2026",
       "name": "Flanders Legacy Gravel",
       "date": "Sunday 19 Oct 2025",
       "locationText": "Leuven, BE",
@@ -65,7 +72,8 @@
       "lon": 4.7011675
     },
     {
-      "id": "ev-7",
+      "id": "2026-www.gravelista.cc",
+      "season": "2026",
       "name": "Gravelista",
       "date": "Sunday 26 Oct 2025",
       "locationText": "AU",
@@ -74,7 +82,8 @@
       "lon": 134.755
     },
     {
-      "id": "ev-8",
+      "id": "2026-dustman",
+      "season": "2026",
       "name": "Dustman",
       "date": "Saturday 01 Nov 2025",
       "locationText": "Kanchanaburi, TH",
@@ -83,7 +92,8 @@
       "lon": 99.2676727
     },
     {
-      "id": "ev-9",
+      "id": "2026-ourique",
+      "season": "2026",
       "name": "Alentejo Gravel",
       "date": "Sunday 09 Nov 2025",
       "locationText": "Ourique, PT",
@@ -92,7 +102,8 @@
       "lon": -8.2237262
     },
     {
-      "id": "ev-10",
+      "id": "2026-cederberg",
+      "season": "2026",
       "name": "The Ceder",
       "date": "Saturday 14 Feb 2026",
       "locationText": "Nuwerust Farm, ZA",
@@ -101,7 +112,8 @@
       "lon": 19.3780583
     },
     {
-      "id": "ev-11",
+      "id": "2026-castellon",
+      "season": "2026",
       "name": "Castellon Gravel Race",
       "date": "Sunday 22 Feb 2026",
       "locationText": "Llucena, ES",
@@ -110,7 +122,8 @@
       "lon": -0.2803675
     },
     {
-      "id": "ev-12",
+      "id": "2026-camboriu",
+      "season": "2026",
       "name": "Gravel Brazil",
       "date": "Sunday 08 Mar 2026",
       "locationText": "Camboriu, BR",
@@ -119,7 +132,8 @@
       "lon": -48.6535657
     },
     {
-      "id": "ev-13",
+      "id": "2026-turnhout",
+      "season": "2026",
       "name": "Turnhout Gravel",
       "date": "Sunday 22 Mar 2026",
       "locationText": "Turnhout, BE",
@@ -128,14 +142,18 @@
       "lon": 4.9299924
     },
     {
-      "id": "ev-14",
+      "id": "2026-elvas",
+      "season": "2026",
       "name": "114 Gravel Race",
       "date": "Saturday 28 Mar 2026",
       "locationText": "Elvas (POR) – Badajoz (ESP), PT",
-      "link": "https://ucigravelworldseries.com/en/elvas/"
+      "link": "https://ucigravelworldseries.com/en/elvas/",
+      "lat": 38.8765985,
+      "lon": -7.1663632
     },
     {
-      "id": "ev-15",
+      "id": "2026-villa-cura-brochero",
+      "season": "2026",
       "name": "Vuelta Altas Cumbres Gravel",
       "date": "Sunday 29 Mar 2026",
       "locationText": "Cura Brochero - Cordoba, AR",
@@ -144,7 +162,8 @@
       "lon": -64.1704134
     },
     {
-      "id": "ev-16",
+      "id": "2026-veldamworthersee",
+      "season": "2026",
       "name": "Wörthersee Gravel Race",
       "date": "Sunday 12 Apr 2026",
       "locationText": "Velden am Worthersee, AT",
@@ -153,14 +172,18 @@
       "lon": 14.0450583
     },
     {
-      "id": "ev-17",
+      "id": "2026-monaco",
+      "season": "2026",
       "name": "Monaco Gravel Race",
       "date": "Sunday 19 Apr 2026",
       "locationText": "Monaco – Peille (MON), MC",
-      "link": "https://ucigravelworldseries.com/en/monaco/"
+      "link": "https://ucigravelworldseries.com/en/monaco/",
+      "lat": 43.7323492,
+      "lon": 7.4276832
     },
     {
-      "id": "ev-18",
+      "id": "2026-roden",
+      "season": "2026",
       "name": "Gravel One Fifty",
       "date": "Saturday 25 Apr 2026",
       "locationText": "Roden, NL",
@@ -169,14 +192,18 @@
       "lon": 6.4275196
     },
     {
-      "id": "ev-19",
+      "id": "2026-fayetteville",
+      "season": "2026",
       "name": "Highlands Gravel Classic",
       "date": "Saturday 25 Apr 2026",
       "locationText": "Fayetteville-Goshen, US",
-      "link": "https://ucigravelworldseries.com/en/fayetteville/"
+      "link": "https://ucigravelworldseries.com/en/fayetteville/",
+      "lat": 36.0625843,
+      "lon": -94.1574328
     },
     {
-      "id": "ev-20",
+      "id": "2026-sardegna",
+      "season": "2026",
       "name": "Giro Sardegna Gravel",
       "date": "Friday 01 May 2026",
       "locationText": "Muravera-Villasimius, IT",
@@ -185,7 +212,8 @@
       "lon": 9.1746227
     },
     {
-      "id": "ev-21",
+      "id": "2026-valkenburg",
+      "season": "2026",
       "name": "Marly Grav Race",
       "date": "Sunday 10 May 2026",
       "locationText": "Valkenburg, NL",
@@ -194,7 +222,8 @@
       "lon": 5.8312518
     },
     {
-      "id": "ev-22",
+      "id": "2026-seven",
+      "season": "2026",
       "name": "Seven",
       "date": "Saturday 16 May 2026",
       "locationText": "Nannup, WA, AU",
@@ -203,56 +232,78 @@
       "lon": 115.6731528
     },
     {
-      "id": "ev-23",
+      "id": "2026-galloway",
+      "season": "2026",
       "name": "The Gralloch",
       "date": "Saturday 16 May 2026",
       "locationText": "Gatehouse of Fleet (Scotland), GB",
-      "link": "https://ucigravelworldseries.com/en/galloway/"
+      "link": "https://ucigravelworldseries.com/en/galloway/",
+      "lat": 54.8828245,
+      "lon": -4.1824606
     },
     {
-      "id": "ev-24",
+      "id": "2026-gravel-adventure",
+      "season": "2026",
       "name": "Gravel Adventure",
       "date": "Saturday 06 Jun 2026",
       "locationText": "Szklarska Poreba - Jakuszyce, PL",
-      "link": "https://ucigravelworldseries.com/en/gravel-adventure/"
+      "link": "https://ucigravelworldseries.com/en/gravel-adventure/",
+      "lat": 50.8146295,
+      "lon": 15.4295162
     },
     {
-      "id": "ev-25",
+      "id": "2026-naivasha",
+      "season": "2026",
       "name": "Safari Gravel Race",
       "date": "Saturday 13 Jun 2026",
       "locationText": "Hell’s Gate, Naivasha, KE",
-      "link": "https://ucigravelworldseries.com/en/naivasha/"
+      "link": "https://ucigravelworldseries.com/en/naivasha/",
+      "lat": -0.8896355,
+      "lon": 36.3188478
     },
     {
-      "id": "ev-26",
+      "id": "2026-millau",
+      "season": "2026",
       "name": "Wish One Millau Grands Causses",
       "date": "Sunday 14 Jun 2026",
       "locationText": "Millau, FR",
-      "link": "https://ucigravelworldseries.com/en/millau/"
+      "link": "https://ucigravelworldseries.com/en/millau/",
+      "lat": 44.1006693,
+      "lon": 3.0777594
     },
     {
-      "id": "ev-27",
+      "id": "2026-derby",
+      "season": "2026",
       "name": "The Devils Cardigan",
       "date": "Saturday 20 Jun 2026",
       "locationText": "Derby (TAS), AU",
-      "link": "https://ucigravelworldseries.com/en/derby/"
+      "link": "https://ucigravelworldseries.com/en/derby/",
+      "lat": -41.149041,
+      "lon": 147.8009475
     },
     {
-      "id": "ev-28",
+      "id": "2026-auronzo-di-cadore",
+      "season": "2026",
       "name": "Grand Tour 3 Cime Lavaredo",
       "date": "Saturday 20 Jun 2026",
       "locationText": "Auronzo di Cadore, IT",
-      "link": "https://ucigravelworldseries.com/en/auronzo-di-cadore/"
+      "link": "https://ucigravelworldseries.com/en/auronzo-di-cadore/",
+      "lat": 46.5511562,
+      "lon": 12.4430387
     },
     {
-      "id": "ev-29",
+      "id": "2026-vianden",
+      "season": "2026",
       "name": "Eislek Gravel Luxembourg",
       "date": "Sunday 21 Jun 2026",
       "locationText": "Vianden, LU",
-      "link": "https://ucigravelworldseries.com/en/vianden/"
+      "link": "https://ucigravelworldseries.com/en/vianden/",
+      "lat": 49.9389197,
+      "lon": 6.1996446
     },
     {
-      "id": "ev-30",
+      "id": "2026-og-classique",
+      "season": "2026",
       "name": "OG Classique",
       "date": "Sunday 21 Jun 2026",
       "locationText": "Wakefield, QC, CA",
@@ -261,7 +312,8 @@
       "lon": -75.92926
     },
     {
-      "id": "ev-31",
+      "id": "2026-ghost-of-gravel",
+      "season": "2026",
       "name": "Ghost of The Gravel",
       "date": "Saturday 27 Jun 2026",
       "locationText": "Water Valley, AB, CA",
@@ -270,7 +322,8 @@
       "lon": -114.6109671
     },
     {
-      "id": "ev-32",
+      "id": "2026-singen",
+      "season": "2026",
       "name": "Hegau Gravel Festival",
       "date": "Sunday 05 Jul 2026",
       "locationText": "Singen, DE",
@@ -279,7 +332,8 @@
       "lon": 8.8348709
     },
     {
-      "id": "ev-33",
+      "id": "2026-villars",
+      "season": "2026",
       "name": "The Majestics Gravel",
       "date": "Sunday 12 Jul 2026",
       "locationText": "Villars, CH",
@@ -288,7 +342,8 @@
       "lon": 7.1161892
     },
     {
-      "id": "ev-34",
+      "id": "2026-3rides",
+      "season": "2026",
       "name": "3RIDES Gravel",
       "date": "Sunday 19 Jul 2026",
       "locationText": "Winterberg, DE",
@@ -297,7 +352,8 @@
       "lon": 8.5334064
     },
     {
-      "id": "ev-35",
+      "id": "2026-around-the-pot",
+      "season": "2026",
       "name": "Around the Pot",
       "date": "Saturday 01 Aug 2026",
       "locationText": "Swellendam, ZA",
@@ -306,7 +362,8 @@
       "lon": 20.441944
     },
     {
-      "id": "ev-36",
+      "id": "2026-gravel-tour-hlinsko",
+      "season": "2026",
       "name": "Gravel Tour Hlinsko",
       "date": "Saturday 01 Aug 2026",
       "locationText": "Hlinsko, CZ",
@@ -315,7 +372,8 @@
       "lon": 15.907339
     },
     {
-      "id": "ev-37",
+      "id": "2026-gravel-bogota",
+      "season": "2026",
       "name": "Gravel Bogota",
       "date": "Sunday 02 Aug 2026",
       "locationText": "Chia Bogota, CO",
@@ -324,7 +382,8 @@
       "lon": -74.0381764
     },
     {
-      "id": "ev-38",
+      "id": "2026-tukums",
+      "season": "2026",
       "name": "Gravel Weekend",
       "date": "Saturday 08 Aug 2026",
       "locationText": "Tukums, LV",
@@ -333,7 +392,8 @@
       "lon": 23.1524528
     },
     {
-      "id": "ev-39",
+      "id": "2026-yakurai",
+      "season": "2026",
       "name": "HYSK Gravel Classic Yakurai presented by GRAVELKING",
       "date": "Saturday 22 Aug 2026",
       "locationText": "Kami Town, JP",
@@ -342,7 +402,8 @@
       "lon": 134.5946985
     },
     {
-      "id": "ev-40",
+      "id": "2026-windhoek",
+      "season": "2026",
       "name": "Khomas100",
       "date": "Saturday 22 Aug 2026",
       "locationText": "Windhoek, NA",
@@ -351,7 +412,8 @@
       "lon": 17.0772739
     },
     {
-      "id": "ev-41",
+      "id": "2026-houffalize",
+      "season": "2026",
       "name": "2026 UEC Gravel European Championships",
       "date": "Sunday 30 Aug 2026",
       "locationText": "Houffalize, BE",
@@ -360,7 +422,8 @@
       "lon": 5.7886928
     },
     {
-      "id": "ev-42",
+      "id": "2026-arteaga",
+      "season": "2026",
       "name": "Gravel Arteaga Mexico",
       "date": "Sunday 30 Aug 2026",
       "locationText": "Arteaga, Coahuila, MX",
@@ -369,7 +432,8 @@
       "lon": -100.6831723
     },
     {
-      "id": "ev-43",
+      "id": "2026-dronninglund",
+      "season": "2026",
       "name": "The Wolf",
       "date": "Saturday 05 Sep 2026",
       "locationText": "Dronninglund, DK",
@@ -378,14 +442,18 @@
       "lon": 10.2900877
     },
     {
-      "id": "ev-44",
+      "id": "2026-ruthin",
+      "season": "2026",
       "name": "Graean Cymru",
       "date": "Saturday 05 Sep 2026 - 06 Sep 2026",
       "locationText": "Llyn Brenig (Ruthin - Wales), GB",
-      "link": "https://ucigravelworldseries.com/en/ruthin/"
+      "link": "https://ucigravelworldseries.com/en/ruthin/",
+      "lat": 53.0921826,
+      "lon": -3.5287878
     },
     {
-      "id": "ev-45",
+      "id": "2026-lahti",
+      "season": "2026",
       "name": "Falling Leaves",
       "date": "Saturday 12 Sep 2026",
       "locationText": "Lahti, FI",
@@ -394,7 +462,8 @@
       "lon": 25.6613418
     },
     {
-      "id": "ev-46",
+      "id": "2026-girona",
+      "season": "2026",
       "name": "Sea Otter Europe Girona",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Girona, ES",
@@ -403,7 +472,8 @@
       "lon": 2.8199439
     },
     {
-      "id": "ev-47",
+      "id": "2026-olepaa-elva",
+      "season": "2026",
       "name": "Tartu Rattamaraton",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Otepää-Elva, EE",
@@ -412,7 +482,8 @@
       "lon": 26.343402
     },
     {
-      "id": "ev-48",
+      "id": "2026-mammoth",
+      "season": "2026",
       "name": "Mammoth TUFF",
       "date": "Saturday 19 Sep 2026",
       "locationText": "Mammoth Lakes, CA, US",
@@ -421,7 +492,8 @@
       "lon": -118.9668509
     },
     {
-      "id": "ev-49",
+      "id": "2026-halmstad",
+      "season": "2026",
       "name": "Gravel Grit ’n Grind",
       "date": "Saturday 26 Sep 2026",
       "locationText": "Halmstad, SE",
@@ -430,18 +502,24 @@
       "lon": 12.8574827
     },
     {
-      "id": "ev-50",
+      "id": "2026-66-degres",
+      "season": "2026",
       "name": "Pyrénées Catalanes Gravel Tour",
       "date": "Saturday 26 Sep 2026",
       "locationText": "Font Romeu, FR",
-      "link": "https://ucigravelworldseries.com/en/66-degres/"
+      "link": "https://ucigravelworldseries.com/en/66-degres/",
+      "lat": 42.4965705,
+      "lon": 2.0416766
     },
     {
-      "id": "ev-51",
+      "id": "2026-2026-world-champs",
+      "season": "2026",
       "name": "UCI Gravel World Championships 2026",
       "date": "Saturday 10 Oct 2026 - 11 Oct 2026",
       "locationText": "Nannup, Western Australia, AU",
-      "link": "https://sevengravelrace.com/2026-world-champs/"
+      "link": "https://sevengravelrace.com/2026-world-champs/",
+      "lat": -34.154996,
+      "lon": 115.6731528
     }
   ]
 }
