@@ -92,7 +92,7 @@ export default function EventList({ events, onSelect, selectedId = null, fullscr
                 <div className="event-list-modal-header">
                     {years && onYearChange && (
                         <div className="year-select">
-                            <label htmlFor="year-mobile">Year: </label>
+                            <label htmlFor="year-mobile">Season: </label>
                             <select id="year-mobile" value={year} onChange={e => onYearChange(e.target.value)}>
                                 <option value="all">All</option>
                                 {years.map(y => (

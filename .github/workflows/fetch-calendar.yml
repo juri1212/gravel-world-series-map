@@ -27,7 +27,6 @@ jobs:
 
       - name: Install fetcher deps
         run: npm ci
-          npm ci
 
       - name: Run fetcher
         run: npm run fetch-calendar
@@ -52,7 +51,11 @@ jobs:
     outputs:
       artifact-path: frontend/dist
     steps:
+      # Check out the branch head (not the triggering SHA) so the build includes
+      # the calendar.json commit pushed by the fetch job
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - name: Use Node.js
         uses: actions/setup-node@v4
@@ -60,14 +63,10 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: |
-          cd frontend
-          npm ci
+        run: npm ci
 
       - name: Build
-        run: |
-          cd frontend
-          npm run build
+        run: npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
